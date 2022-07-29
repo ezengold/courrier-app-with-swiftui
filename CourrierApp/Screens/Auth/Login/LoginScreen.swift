@@ -204,9 +204,9 @@ struct LoginScreen: View {
 				}
 				.padding(.horizontal, 20)
 				.padding(.bottom, 20)
-				.onTapGesture {
-					UIApplication.shared.dismissKeyboard()
-				}
+			}
+			.onTapGesture {
+				UIApplication.shared.dismissKeyboard()
 			}
 		}
 		.navigationBarHidden(true)

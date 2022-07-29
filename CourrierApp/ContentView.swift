@@ -6,6 +6,7 @@ struct ContentView: View {
 		NavigationView {
 			LoginScreen()
 		}
+		.preferredColorScheme(.light)
 	}
 }
 

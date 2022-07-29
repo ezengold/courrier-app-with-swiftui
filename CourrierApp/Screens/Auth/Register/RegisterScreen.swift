@@ -13,6 +13,9 @@ struct RegisterScreen: View {
 				VStack(alignment: .center, spacing: 0) {
 					HStack {
 						Image(systemName: "arrow.backward")
+							.resizable()
+							.scaledToFit()
+							.frame(width: 20, height: 20)
 							.padding(8)
 							.onTapGesture {
 								presentationMode.wrappedValue.dismiss()
@@ -152,6 +155,7 @@ struct RegisterScreen: View {
 struct RegisterScreen_Previews: PreviewProvider {
 	static var previews: some View {
 		RegisterScreen()
+			.preferredColorScheme(.dark)
 			.previewDevice("iPhone 12")
 	}
 }
