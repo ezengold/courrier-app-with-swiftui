@@ -17,6 +17,7 @@
 		B1A2EB232893C481006221CC /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A2EB222893C481006221CC /* countries.json */; };
 		B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */; };
 		B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB262893C4C0006221CC /* CountryItem.swift */; };
+		B1BFB9CE289483A6002817EE /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BFB9CD289483A6002817EE /* SplashScreen.storyboard */; };
 		B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7E357288013B600A6FA17 /* CourrierAppApp.swift */; };
 		B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7E359288013B600A6FA17 /* ContentView.swift */; };
 		B1C7E35C288013BA00A6FA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C7E35B288013BA00A6FA17 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		B1A2EB222893C481006221CC /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
 		B1A2EB262893C4C0006221CC /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
+		B1BFB9CD289483A6002817EE /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		B1C7E354288013B600A6FA17 /* CourrierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourrierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C7E357288013B600A6FA17 /* CourrierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourrierAppApp.swift; sourceTree = "<group>"; };
 		B1C7E359288013B600A6FA17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B1C7E359288013B600A6FA17 /* ContentView.swift */,
 				B1C7E35B288013BA00A6FA17 /* Assets.xcassets */,
 				B1C7E35D288013BA00A6FA17 /* Preview Content */,
+				B1BFB9CD289483A6002817EE /* SplashScreen.storyboard */,
 			);
 			path = CourrierApp;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				B1DD016D2880213C004D875B /* Montserrat-Light.ttf in Resources */,
 				B1C7E35C288013BA00A6FA17 /* Assets.xcassets in Resources */,
 				B1DD016F2880213C004D875B /* Montserrat-Medium.ttf in Resources */,
+				B1BFB9CE289483A6002817EE /* SplashScreen.storyboard in Resources */,
 				B1DD01712880213C004D875B /* Montserrat-LightItalic.ttf in Resources */,
 				B1DD016A2880213C004D875B /* Montserrat-SemiBold.ttf in Resources */,
 				B1DD016E2880213C004D875B /* Montserrat-ExtraBold.ttf in Resources */,
@@ -447,6 +451,7 @@
 				INFOPLIST_FILE = CourrierApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -477,6 +482,7 @@
 				INFOPLIST_FILE = CourrierApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

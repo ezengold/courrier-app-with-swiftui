@@ -144,9 +144,9 @@ struct RegisterScreen: View {
 				.padding(.horizontal, 20)
 				.padding(.bottom, 50)
 			}
-			.gesture(DragGesture().onChanged({ _ in
+			.onTapGesture {
 				UIApplication.shared.dismissKeyboard()
-			}))
+			}
 		}
 		.navigationBarHidden(true)
 	}
