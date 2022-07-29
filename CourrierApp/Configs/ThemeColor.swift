@@ -18,4 +18,5 @@ struct ThemeColor {
 	static let boldText = Color("BoldTextColor")
 	static let text = Color("TextColor")
 	static let borderBlue = Color("BorderBlueColor")
+	static let buttonShadow = Color("ButtonShadow")
 }

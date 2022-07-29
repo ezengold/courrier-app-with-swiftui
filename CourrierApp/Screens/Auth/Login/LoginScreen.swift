@@ -25,10 +25,12 @@ struct LoginScreen: View {
 							Spacer()
 						}
 						Spacer(minLength: 40)
-						Text("Welcome To Pickup App")
-							.multilineTextAlignment(.center)
-							.foregroundColor(ThemeColor.boldText)
-							.font(ThemeFont.bold(24))
+						NavigationLink(destination: RegisterScreen(), label: {
+							Text("Welcome To Pickup App")
+								.multilineTextAlignment(.center)
+								.foregroundColor(ThemeColor.boldText)
+								.font(ThemeFont.bold(24))
+						})
 						Spacer(minLength: 10)
 						Text("You can now continue with your mobile number to Pickup your Goods!")
 							.foregroundColor(ThemeColor.text)
@@ -97,8 +99,9 @@ struct LoginScreen: View {
 								.padding(.leading, 10)
 								.padding(.trailing, 15)
 								TextField("Enter Your Mobile Number", text: $loginVM.phoneNumber)
-									.foregroundColor(ThemeColor.boldText)
 									.font(ThemeFont.medium(16))
+									.keyboardType(.numberPad)
+									.foregroundColor(ThemeColor.boldText)
 									.frame(width: geometry.size.width - 75, alignment: .leading)
 									.padding(.trailing, 15)
 							}
@@ -169,41 +172,44 @@ struct LoginScreen: View {
 					
 					Spacer(minLength: 100)
 					
-					GeometryReader { geometry in
-						VStack(alignment: .center, spacing: 0) {
-							FullWidth()
-							Button {
-								
-							} label: {
-								Text("Login Now")
-									.font(ThemeFont.medium(19))
-									.frame(width: geometry.size.width, height: .none, alignment: .center)
-							}
-							.frame(width: geometry.size.width, height: 54, alignment: .center)
-							.background(ThemeColor.primary)
-							.foregroundColor(Color.white)
-							.cornerRadius(7)
-							.shadow(color: Color(red: 5, green: 27, blue: 40).opacity(0.09), radius: 10, x: -5, y: 5)
-							
-							Spacer(minLength: 40)
-							
-							Text("For Commercial / Bulk Movement Please")
-								.foregroundColor(ThemeColor.text)
-								.font(ThemeFont.regular(14))
-							Spacer(minLength: 10)
-							Text("Contact")
-								.foregroundColor(ThemeColor.text)
-								.font(ThemeFont.regular(14))
-							+ Text(" +91 12345 06789")
-								.foregroundColor(ThemeColor.boldText)
-								.font(ThemeFont.semiBold(14))
+					VStack(alignment: .center, spacing: 0) {
+						FullWidth()
+						Button {
+							//
+						} label: {
+							Text("Login Now")
+								.font(ThemeFont.medium(19))
+								.frame(maxWidth: .infinity)
+								.frame(height: 54, alignment: .center)
+								.foregroundColor(Color.white)
+								.background(
+									RoundedRectangle(cornerRadius: 7)
+										.fill(ThemeColor.primary)
+										.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
+								)
 						}
+						Spacer(minLength: 40)
+						
+						Text("For Commercial / Bulk Movement Please")
+							.foregroundColor(ThemeColor.text)
+							.font(ThemeFont.regular(14))
+						Spacer(minLength: 10)
+						Text("Contact")
+							.foregroundColor(ThemeColor.text)
+							.font(ThemeFont.regular(14))
+						+ Text(" +91 12345 06789")
+							.foregroundColor(ThemeColor.boldText)
+							.font(ThemeFont.semiBold(14))
 					}
 				}
 				.padding(.horizontal, 20)
-				.padding(.bottom, 200)
+				.padding(.bottom, 20)
+				.onTapGesture {
+					UIApplication.shared.dismissKeyboard()
+				}
 			}
 		}
+		.navigationBarHidden(true)
 	}
 }
 

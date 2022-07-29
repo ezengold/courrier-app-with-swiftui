@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B10542B828804EFA0071FF93 /* SystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B728804EFA0071FF93 /* SystemIcon.swift */; };
 		B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B9288051D30071FF93 /* ImageIcon.swift */; };
+		B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE64D28941768001B53A0 /* RegisterScreen.swift */; };
+		B13EE65028941792001B53A0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE64F28941792001B53A0 /* RegisterViewModel.swift */; };
+		B13EE6522894238B001B53A0 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE6512894238B001B53A0 /* RegisterModel.swift */; };
 		B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113828807D1D00A40DBA /* Checkbox.swift */; };
 		B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113A2880881F00A40DBA /* LoginScreen.swift */; };
 		B1A2EB232893C481006221CC /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A2EB222893C481006221CC /* countries.json */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		B10542B728804EFA0071FF93 /* SystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcon.swift; sourceTree = "<group>"; };
 		B10542B9288051D30071FF93 /* ImageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIcon.swift; sourceTree = "<group>"; };
+		B13EE64D28941768001B53A0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		B13EE64F28941792001B53A0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B13EE6512894238B001B53A0 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		B15C113828807D1D00A40DBA /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B15C113A2880881F00A40DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		B1A2EB222893C481006221CC /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13EE64C2894174A001B53A0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B13EE64D28941768001B53A0 /* RegisterScreen.swift */,
+				B13EE64F28941792001B53A0 /* RegisterViewModel.swift */,
+				B13EE6512894238B001B53A0 /* RegisterModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		B1A2EB212893C3EF006221CC /* CountryPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +159,7 @@
 		B1C7E3662880153B00A6FA17 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B13EE64C2894174A001B53A0 /* Register */,
 				B1C7E3672880154800A6FA17 /* Login */,
 			);
 			path = Auth;
@@ -281,8 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */,
+				B13EE65028941792001B53A0 /* RegisterViewModel.swift in Sources */,
 				B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */,
 				B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */,
+				B13EE6522894238B001B53A0 /* RegisterModel.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
 				B1DD017828802940004D875B /* FullWidth.swift in Sources */,
 				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
@@ -290,6 +309,7 @@
 				B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */,
 				B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */,
 				B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */,
+				B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */,
 				B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */,
 				B1DD015A28801DFD004D875B /* ThemeColor.swift in Sources */,
 				B10542B828804EFA0071FF93 /* SystemIcon.swift in Sources */,
