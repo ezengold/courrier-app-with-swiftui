@@ -1,16 +1,12 @@
-//
-//  ContentView.swift
-//  CourrierApp
-//
-//  Created by ezen on 14/07/2022.
-//
-
 import SwiftUI
 
 struct ContentView: View {
 	
 	var body: some View {
-		LoginScreen()
+		NavigationView {
+			LoginScreen()
+				.navigationBarHidden(true)
+		}
 	}
 }
 
@@ -18,5 +14,11 @@ struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView()
 			.previewDevice("iPhone 12")
+	}
+}
+
+extension UIApplication {
+	func dismissKeyboard() {
+		sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 	}
 }

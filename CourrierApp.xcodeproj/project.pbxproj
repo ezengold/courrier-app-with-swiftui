@@ -11,6 +11,9 @@
 		B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B9288051D30071FF93 /* ImageIcon.swift */; };
 		B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113828807D1D00A40DBA /* Checkbox.swift */; };
 		B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113A2880881F00A40DBA /* LoginScreen.swift */; };
+		B1A2EB232893C481006221CC /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A2EB222893C481006221CC /* countries.json */; };
+		B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */; };
+		B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB262893C4C0006221CC /* CountryItem.swift */; };
 		B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7E357288013B600A6FA17 /* CourrierAppApp.swift */; };
 		B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7E359288013B600A6FA17 /* ContentView.swift */; };
 		B1C7E35C288013BA00A6FA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C7E35B288013BA00A6FA17 /* Assets.xcassets */; };
@@ -30,6 +33,8 @@
 		B1DD01732880213C004D875B /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1DD01672880213C004D875B /* Montserrat-Italic.ttf */; };
 		B1DD017528802264004D875B /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD017428802264004D875B /* ThemeFont.swift */; };
 		B1DD017828802940004D875B /* FullWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD017728802940004D875B /* FullWidth.swift */; };
+		B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */; };
+		B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,9 @@
 		B10542B9288051D30071FF93 /* ImageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIcon.swift; sourceTree = "<group>"; };
 		B15C113828807D1D00A40DBA /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B15C113A2880881F00A40DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B1A2EB222893C481006221CC /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
+		B1A2EB262893C4C0006221CC /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
 		B1C7E354288013B600A6FA17 /* CourrierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourrierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C7E357288013B600A6FA17 /* CourrierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourrierAppApp.swift; sourceTree = "<group>"; };
 		B1C7E359288013B600A6FA17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +66,8 @@
 		B1DD01672880213C004D875B /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		B1DD017428802264004D875B /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		B1DD017728802940004D875B /* FullWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidth.swift; sourceTree = "<group>"; };
+		B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1A2EB212893C3EF006221CC /* CountryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				B1A2EB222893C481006221CC /* countries.json */,
+				B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */,
+				B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */,
+				B1A2EB262893C4C0006221CC /* CountryItem.swift */,
+			);
+			path = CountryPicker;
+			sourceTree = "<group>";
+		};
 		B1C7E34B288013B600A6FA17 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B15C113A2880881F00A40DBA /* LoginScreen.swift */,
+				B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -170,6 +192,7 @@
 				B10542B728804EFA0071FF93 /* SystemIcon.swift */,
 				B10542B9288051D30071FF93 /* ImageIcon.swift */,
 				B15C113828807D1D00A40DBA /* Checkbox.swift */,
+				B1A2EB212893C3EF006221CC /* CountryPicker */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,6 +258,7 @@
 				B1DD01702880213C004D875B /* Montserrat-MediumItalic.ttf in Resources */,
 				B1DD016B2880213C004D875B /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				B1DD01692880213C004D875B /* Montserrat-Regular.ttf in Resources */,
+				B1A2EB232893C481006221CC /* countries.json in Resources */,
 				B1DD01682880213C004D875B /* Montserrat-BoldItalic.ttf in Resources */,
 				B1C7E35F288013BA00A6FA17 /* Preview Assets.xcassets in Resources */,
 				B1DD016D2880213C004D875B /* Montserrat-Light.ttf in Resources */,
@@ -258,10 +282,14 @@
 			files = (
 				B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */,
 				B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */,
+				B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
 				B1DD017828802940004D875B /* FullWidth.swift in Sources */,
+				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
 				B1DD017528802264004D875B /* ThemeFont.swift in Sources */,
 				B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */,
+				B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */,
+				B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */,
 				B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */,
 				B1DD015A28801DFD004D875B /* ThemeColor.swift in Sources */,
 				B10542B828804EFA0071FF93 /* SystemIcon.swift in Sources */,

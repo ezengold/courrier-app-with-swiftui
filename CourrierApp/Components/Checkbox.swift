@@ -1,26 +1,18 @@
-//
-//  Checkbox.swift
-//  CourrierApp
-//
-//  Created by ezen on 14/07/2022.
-//
-
 import SwiftUI
 
 struct Checkbox: View {
-	var checked: Bool
+	@Binding var checked: Bool
 	var color: Color?
 	var size: CGFloat?
-	var onChange: (_ checked: Bool) -> Void
 	
 	var body: some View {
 		Button {
-			onChange(!checked)
+			checked.toggle()
 		} label: {
 			SystemIcon(
 				iconName: "checkmark",
 				contentMode: .fit,
-				color: checked ? Color.white : (self.color ?? ThemeColor.primary),
+				color: checked ? Color.white : (color ?? ThemeColor.primary),
 				height: (size ?? 15) * 0.5,
 				width: (size ?? 15) * 0.5,
 				align: .center
@@ -36,9 +28,7 @@ struct Checkbox: View {
 }
 
 struct Checkbox_Previews: PreviewProvider {
-    static var previews: some View {
-		Checkbox(checked: false, onChange: { checked in
-			print("Clicked")
-		})
-    }
+	static var previews: some View {
+		Checkbox(checked: .constant(true))
+	}
 }

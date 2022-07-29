@@ -1,18 +1,9 @@
-//
-//  LoginScreen.swift
-//  CourrierApp
-//
-//  Created by ezen on 14/07/2022.
-//
-
 import SwiftUI
 
 struct LoginScreen: View {
-	@State private var hasAcceptedPrivacy: Bool = false
+	@StateObject var loginVM: LoginViewModel = LoginViewModel()
 	
-	@State private var phoneNumber: String = ""
-	
-    var body: some View {
+	var body: some View {
 		ZStack {
 			ThemeColor.background
 				.edgesIgnoringSafeArea(.all)
@@ -49,25 +40,28 @@ struct LoginScreen: View {
 					}
 					VStack(alignment: .leading, spacing: 0) {
 						FullWidth()
-						Button {
-							//
-						} label: {
+						Button (action: {
+							loginVM.showCountryPicker.toggle()
+						}, label: {
 							GeometryReader { geometry in
 								HStack(alignment: .center, spacing: 0) {
-									ImageIcon(
-										iconName: "FlagIndia",
-										contentMode: .fit,
-										height: 25,
-										width: 35,
-										align: .center
-									)
-									.padding(.leading, 10)
-									.padding(.trailing, 15)
-									Text("(+91) India")
-										.foregroundColor(ThemeColor.boldText)
-										.font(ThemeFont.medium(16))
-										.frame(width: geometry.size.width - 95, alignment: .leading)
-										.multilineTextAlignment(.leading)
+									if let country = loginVM.currentCountry {
+										Text(country.flag ?? "")
+											.padding(.leading, 10)
+											.padding(.trailing, 15)
+											.frame(width: 55, height: 20)
+										Text("(+\(country.dialCode)) \(country.name)")
+											.foregroundColor(ThemeColor.boldText)
+											.font(ThemeFont.medium(16))
+											.frame(maxWidth: .infinity, alignment: .leading)
+											.multilineTextAlignment(.leading)
+									} else {
+										Text("Pick a country")
+											.foregroundColor(ThemeColor.boldText)
+											.font(ThemeFont.medium(16))
+											.frame(maxWidth: .infinity, alignment: .leading)
+											.multilineTextAlignment(.leading)
+									}
 									SystemIcon(
 										iconName: "chevron.right",
 										contentMode: .fit,
@@ -81,6 +75,9 @@ struct LoginScreen: View {
 								.frame(width: geometry.size.width, height: 62)
 								.background(Color.white)
 							}
+						})
+						.sheet(isPresented: $loginVM.showCountryPicker) {
+							CountryPicker(currentCountry: $loginVM.currentCountry)
 						}
 						
 						Rectangle()
@@ -99,7 +96,7 @@ struct LoginScreen: View {
 								)
 								.padding(.leading, 10)
 								.padding(.trailing, 15)
-								TextField("Enter Your Mobile Number", text: $phoneNumber)
+								TextField("Enter Your Mobile Number", text: $loginVM.phoneNumber)
 									.foregroundColor(ThemeColor.boldText)
 									.font(ThemeFont.medium(16))
 									.frame(width: geometry.size.width - 75, alignment: .leading)
@@ -124,12 +121,10 @@ struct LoginScreen: View {
 						FullWidth()
 						GeometryReader { geometry in
 							HStack(alignment: .top, spacing: 0) {
-								Checkbox(checked: hasAcceptedPrivacy, size: 15, onChange: {status in
-									hasAcceptedPrivacy = status
-								})
-								.padding(.top, 5)
-								.padding(.leading, 10)
-								.padding(.trailing, 15)
+								Checkbox(checked: $loginVM.hasAcceptedPrivacy, size: 15)
+									.padding(.top, 5)
+									.padding(.leading, 10)
+									.padding(.trailing, 15)
 								Group {
 									Text("I have read and accept the")
 										.font(ThemeFont.regular(13))
@@ -152,11 +147,9 @@ struct LoginScreen: View {
 						
 						GeometryReader { geometry in
 							HStack(alignment: .center, spacing: 0) {
-								Checkbox(checked: hasAcceptedPrivacy, size: 15, onChange: {status in
-									hasAcceptedPrivacy = status
-								})
-								.padding(.leading, 10)
-								.padding(.trailing, 15)
+								Checkbox(checked: $loginVM.hasAcceptedPrivacy, size: 15)
+									.padding(.leading, 10)
+									.padding(.trailing, 15)
 								Group {
 									Text("I have read and accept the")
 										.font(ThemeFont.regular(13))
@@ -211,12 +204,12 @@ struct LoginScreen: View {
 				.padding(.bottom, 200)
 			}
 		}
-    }
+	}
 }
 
 struct LoginScreen_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		LoginScreen()
 			.previewDevice("iPhone 12")
-    }
+	}
 }
