@@ -10,12 +10,3 @@ struct CountryItem: Identifiable {
 	
 	static let DEFAULT_COUNTRY: CountryItem = CountryItem(id: "91", name: "India", localName: "भारत, India", countryCode: "IN", dialCode: "91", flag: "🇮🇳")
 }
-
-struct CountryDataItem: Codable {
-	let countryNameEn: String
-	let countryNameLocal: String
-	let countryCode: String
-	let countryCallingCode: String
-	let flag: String?
-}
-

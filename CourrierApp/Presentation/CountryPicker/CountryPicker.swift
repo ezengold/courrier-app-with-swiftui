@@ -3,7 +3,7 @@ import SwiftUI
 struct CountryPicker: View {
 	@Environment(\.presentationMode) var presentationMode
 	
-	@StateObject var pickerVM: CountryPickerViewModel = CountryPickerViewModel()
+	@StateObject var vm: CountryPickerViewModel = CountryPickerViewModel()
 	
 	@Binding var currentCountry: CountryItem?
 	
@@ -21,9 +21,7 @@ struct CountryPicker: View {
 					.font(ThemeFont.medium(14))
 				Spacer(minLength: 15)
 				HStack(alignment: .center) {
-					TextField("Search", text: $pickerVM.searchValue) { startedEditing in
-						
-					}
+					TextField("Search", text: $vm.searchValue)
 					.font(ThemeFont.regular(14))
 					.padding(15)
 					.background(Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.04))
@@ -42,8 +40,8 @@ struct CountryPicker: View {
 				.padding(.leading, 15)
 				.padding(.bottom, 15)
 				List(
-					pickerVM.countries.filter({ (el: CountryItem) -> Bool in
-						return el.name.hasPrefix(pickerVM.searchValue) || pickerVM.searchValue == ""
+					vm.countries.filter({ (el: CountryItem) -> Bool in
+						return el.name.hasPrefix(vm.searchValue) || vm.searchValue == ""
 					})
 				) { country in
 					HStack {
@@ -75,6 +73,9 @@ struct CountryPicker: View {
 				.gesture(DragGesture().onChanged({ _ in
 					UIApplication.shared.dismissKeyboard()
 				}))
+			}
+			.task {
+				await vm.fetchCountries()
 			}
 		}
 		.edgesIgnoringSafeArea([.top, .leading, .trailing])
