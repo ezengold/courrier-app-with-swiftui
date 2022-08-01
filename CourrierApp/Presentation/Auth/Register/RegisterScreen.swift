@@ -3,7 +3,7 @@ import SwiftUI
 struct RegisterScreen: View {
 	@Environment(\.presentationMode) var presentationMode
 	
-	@StateObject var registerVM: RegisterViewModel = RegisterViewModel()
+	@StateObject var vm: RegisterViewModel = RegisterViewModel()
 	
 	var body: some View {
 		ZStack(alignment: .bottom) {
@@ -53,33 +53,47 @@ struct RegisterScreen: View {
 					VStack(spacing: 20) {
 						FullWidth()
 						HStack(spacing: 20) {
-							Text("\(registerVM.fields.country?.flag ?? "")  (+\(registerVM.fields.country?.dialCode ?? "??"))")
+							Text("\(vm.fields.country?.flag ?? "")  (+\(vm.fields.country?.dialCode ?? "??"))")
 								.font(ThemeFont.medium(16))
 								.frame(width: 120, height: 55)
 								.background(ThemeColor.background)
 								.overlay {
 									RoundedRectangle(cornerRadius: 11)
-										.stroke(ThemeColor.borderBlue, lineWidth: 1)
+										.stroke(
+											vm.errors.country.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary,
+											lineWidth: 1
+										)
 								}
 								.onTapGesture {
-									registerVM.showCountryPicker.toggle()
+									vm.showCountryPicker.toggle()
 								}
-								.sheet(isPresented: $registerVM.showCountryPicker) {
-									CountryPicker(currentCountry: $registerVM.fields.country)
+								.sheet(isPresented: $vm.showCountryPicker) {
+									CountryPicker(currentCountry: $vm.fields.country)
 								}
-							TextField("Phone number", text: $registerVM.fields.phoneNumber)
-								.font(ThemeFont.medium(16))
-								.keyboardType(.numberPad)
-								.padding(.horizontal)
-								.frame(height: 55)
-								.frame(maxWidth: .infinity)
-								.background(ThemeColor.background)
-								.overlay {
-									RoundedRectangle(cornerRadius: 11)
-										.stroke(ThemeColor.borderBlue, lineWidth: 1)
-								}
+							TextField(
+								"Phone number",
+								text: $vm.fields.phoneNumber,
+								onEditingChanged: { updated in vm.onInputChange(field: .phoneNumber, value: vm.fields.phoneNumber)}
+							)
+							.font(ThemeFont.medium(16))
+							.keyboardType(.numberPad)
+							.padding(.horizontal)
+							.frame(height: 55)
+							.frame(maxWidth: .infinity)
+							.background(ThemeColor.background)
+							.overlay {
+								RoundedRectangle(cornerRadius: 11)
+									.stroke(
+										vm.errors.phoneNumber.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary,
+										lineWidth: 1
+									)
+							}
 						}
-						TextField("Enter your name", text: $registerVM.fields.fullName)
+						TextField(
+							"Enter your name",
+							text: $vm.fields.fullName,
+							onEditingChanged: { updated in vm.onInputChange(field: .fullName, value: vm.fields.fullName)}
+						)
 							.font(ThemeFont.medium(16))
 							.padding(.leading, 45)
 							.padding(.trailing)
@@ -88,14 +102,21 @@ struct RegisterScreen: View {
 							.background(ThemeColor.background)
 							.overlay {
 								RoundedRectangle(cornerRadius: 11)
-									.stroke(ThemeColor.borderBlue, lineWidth: 1)
+									.stroke(
+										vm.errors.fullName.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary,
+										lineWidth: 1
+									)
 								Image("user")
 									.resizable()
 									.scaledToFit()
 									.frame(width: 25, height: 25, alignment: .center)
 									.position(x: 25, y: 28)
 							}
-						TextField("Enter your email address", text: $registerVM.fields.email)
+						TextField(
+							"Enter your email address",
+							text: $vm.fields.email,
+							onEditingChanged: { updated in vm.onInputChange(field: .email, value: vm.fields.email)}
+						)
 							.keyboardType(.emailAddress)
 							.font(ThemeFont.medium(16))
 							.keyboardType(.numberPad)
@@ -106,7 +127,10 @@ struct RegisterScreen: View {
 							.background(ThemeColor.background)
 							.overlay {
 								RoundedRectangle(cornerRadius: 11)
-									.stroke(ThemeColor.borderBlue, lineWidth: 1)
+									.stroke(
+										vm.errors.email.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary,
+										lineWidth: 1
+									)
 								Image("mail")
 									.resizable()
 									.scaledToFit()
@@ -114,7 +138,7 @@ struct RegisterScreen: View {
 									.position(x: 25, y: 28)
 							}
 						HStack(alignment: .center, spacing: 0) {
-							Checkbox(checked: $registerVM.isRemember, size: 15)
+							Checkbox(checked: $vm.isRemember, size: 15)
 								.padding(.leading, 5)
 								.padding(.trailing, 15)
 							Text("Remember me")
@@ -126,18 +150,40 @@ struct RegisterScreen: View {
 						}
 						Spacer(minLength: 80)
 						Button {
-							registerVM.onRegister()
+							vm.onRegister()
 						} label: {
-							Text("Register")
-								.font(ThemeFont.medium(19))
-								.frame(maxWidth: .infinity)
-								.frame(height: 54, alignment: .center)
-								.foregroundColor(Color.white)
-								.background(
-									RoundedRectangle(cornerRadius: 7)
-										.fill(ThemeColor.primary)
-										.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
-								)
+							if vm.loading {
+								ProgressView()
+									.progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+									.frame(maxWidth: .infinity)
+									.frame(height: 54, alignment: .center)
+									.background(
+										RoundedRectangle(cornerRadius: 7)
+											.fill(ThemeColor.primary)
+											.shadow(
+												color: ThemeColor.buttonShadow,
+												radius: 10,
+												x: -5,
+												y: 5
+											)
+									)
+							} else {
+								Text("Register")
+									.font(ThemeFont.medium(19))
+									.frame(maxWidth: .infinity)
+									.frame(height: 54, alignment: .center)
+									.foregroundColor(Color.white)
+									.background(
+										RoundedRectangle(cornerRadius: 7)
+											.fill(ThemeColor.primary)
+											.shadow(
+												color: ThemeColor.buttonShadow,
+												radius: 10,
+												x: -5,
+												y: 5
+											)
+									)
+							}
 						}
 					}
 				}
@@ -155,7 +201,7 @@ struct RegisterScreen: View {
 struct RegisterScreen_Previews: PreviewProvider {
 	static var previews: some View {
 		RegisterScreen()
-			.preferredColorScheme(.dark)
+			.preferredColorScheme(.light)
 			.previewDevice("iPhone 12")
 	}
 }

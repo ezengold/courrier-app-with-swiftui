@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		B10542B828804EFA0071FF93 /* SystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B728804EFA0071FF93 /* SystemIcon.swift */; };
 		B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B9288051D30071FF93 /* ImageIcon.swift */; };
+		B135EEC72897477200448803 /* IsRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEC62897477200448803 /* IsRequired.swift */; };
+		B135EEC9289747B700448803 /* IsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEC8289747B700448803 /* IsName.swift */; };
+		B135EECB289747CB00448803 /* IsStrongPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EECA289747CB00448803 /* IsStrongPassword.swift */; };
+		B135EECD2897480400448803 /* IsInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EECC2897480400448803 /* IsInteger.swift */; };
+		B135EECF2897481800448803 /* IsNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EECE2897481800448803 /* IsNumber.swift */; };
+		B135EED32897483D00448803 /* IsEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EED22897483D00448803 /* IsEmail.swift */; };
+		B135EED52897485100448803 /* IsDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EED42897485100448803 /* IsDate.swift */; };
+		B135EED72897488800448803 /* MinLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EED62897488800448803 /* MinLength.swift */; };
+		B135EED9289748AB00448803 /* MaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EED8289748AB00448803 /* MaxLength.swift */; };
+		B135EEDB289748C200448803 /* MinValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEDA289748C200448803 /* MinValue.swift */; };
+		B135EEDD2897491500448803 /* MaxValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEDC2897491500448803 /* MaxValue.swift */; };
+		B135EEDF2897492600448803 /* ExactSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEDE2897492600448803 /* ExactSize.swift */; };
 		B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE64D28941768001B53A0 /* RegisterScreen.swift */; };
 		B13EE65028941792001B53A0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE64F28941792001B53A0 /* RegisterViewModel.swift */; };
 		B13EE6522894238B001B53A0 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE6512894238B001B53A0 /* RegisterModel.swift */; };
@@ -22,6 +34,9 @@
 		B1598BF12896A48F00600E91 /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1598BF02896A48F00600E91 /* UseCaseError.swift */; };
 		B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113828807D1D00A40DBA /* Checkbox.swift */; };
 		B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113A2880881F00A40DBA /* LoginScreen.swift */; };
+		B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */; };
+		B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C13312896F220003BDB85 /* SwiftFormRule.swift */; };
+		B17C13362896FDF6003BDB85 /* SwiftFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C13352896FDF6003BDB85 /* SwiftFormModel.swift */; };
 		B17E0FBA28949D4A0038D42A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FB928949D4A0038D42A /* HomeScreen.swift */; };
 		B17E0FBC28949DD70038D42A /* MyBookingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FBB28949DD70038D42A /* MyBookingScreen.swift */; };
 		B17E0FBF28949E7E0038D42A /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FBE28949E7E0038D42A /* ProfileScreen.swift */; };
@@ -56,6 +71,18 @@
 /* Begin PBXFileReference section */
 		B10542B728804EFA0071FF93 /* SystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcon.swift; sourceTree = "<group>"; };
 		B10542B9288051D30071FF93 /* ImageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIcon.swift; sourceTree = "<group>"; };
+		B135EEC62897477200448803 /* IsRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsRequired.swift; sourceTree = "<group>"; };
+		B135EEC8289747B700448803 /* IsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsName.swift; sourceTree = "<group>"; };
+		B135EECA289747CB00448803 /* IsStrongPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsStrongPassword.swift; sourceTree = "<group>"; };
+		B135EECC2897480400448803 /* IsInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInteger.swift; sourceTree = "<group>"; };
+		B135EECE2897481800448803 /* IsNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNumber.swift; sourceTree = "<group>"; };
+		B135EED22897483D00448803 /* IsEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsEmail.swift; sourceTree = "<group>"; };
+		B135EED42897485100448803 /* IsDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsDate.swift; sourceTree = "<group>"; };
+		B135EED62897488800448803 /* MinLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinLength.swift; sourceTree = "<group>"; };
+		B135EED8289748AB00448803 /* MaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxLength.swift; sourceTree = "<group>"; };
+		B135EEDA289748C200448803 /* MinValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinValue.swift; sourceTree = "<group>"; };
+		B135EEDC2897491500448803 /* MaxValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxValue.swift; sourceTree = "<group>"; };
+		B135EEDE2897492600448803 /* ExactSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactSize.swift; sourceTree = "<group>"; };
 		B13EE64D28941768001B53A0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B13EE64F28941792001B53A0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B13EE6512894238B001B53A0 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
@@ -69,6 +96,9 @@
 		B1598BF02896A48F00600E91 /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
 		B15C113828807D1D00A40DBA /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B15C113A2880881F00A40DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormValidator.swift; sourceTree = "<group>"; };
+		B17C13312896F220003BDB85 /* SwiftFormRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormRule.swift; sourceTree = "<group>"; };
+		B17C13352896FDF6003BDB85 /* SwiftFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormModel.swift; sourceTree = "<group>"; };
 		B17E0FB928949D4A0038D42A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		B17E0FBB28949DD70038D42A /* MyBookingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingScreen.swift; sourceTree = "<group>"; };
 		B17E0FBE28949E7E0038D42A /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -113,6 +143,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B135EEC52897466200448803 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				B135EEC62897477200448803 /* IsRequired.swift */,
+				B135EEC8289747B700448803 /* IsName.swift */,
+				B135EECA289747CB00448803 /* IsStrongPassword.swift */,
+				B135EECC2897480400448803 /* IsInteger.swift */,
+				B135EECE2897481800448803 /* IsNumber.swift */,
+				B135EED22897483D00448803 /* IsEmail.swift */,
+				B135EED42897485100448803 /* IsDate.swift */,
+				B135EED62897488800448803 /* MinLength.swift */,
+				B135EED8289748AB00448803 /* MaxLength.swift */,
+				B135EEDA289748C200448803 /* MinValue.swift */,
+				B135EEDC2897491500448803 /* MaxValue.swift */,
+				B135EEDE2897492600448803 /* ExactSize.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
 		B13EE64C2894174A001B53A0 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +175,7 @@
 		B1598BD72896958300600E91 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B17C132D2896F155003BDB85 /* Services */,
 				B1DD015B288020CB004D875B /* Fonts */,
 				B1DD015828801DC1004D875B /* Configs */,
 				B1DD017628802920004D875B /* Components */,
@@ -233,6 +283,25 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		B17C132D2896F155003BDB85 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B17C132E2896F168003BDB85 /* SwiftForm */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B17C132E2896F168003BDB85 /* SwiftForm */ = {
+			isa = PBXGroup;
+			children = (
+				B135EEC52897466200448803 /* Rules */,
+				B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */,
+				B17C13312896F220003BDB85 /* SwiftFormRule.swift */,
+				B17C13352896FDF6003BDB85 /* SwiftFormModel.swift */,
+			);
+			path = SwiftForm;
 			sourceTree = "<group>";
 		};
 		B17E0FB328949C760038D42A /* Home */ = {
@@ -491,17 +560,28 @@
 			files = (
 				B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */,
 				B1598BEC2896A0E300600E91 /* CountryItemRepositoryImpl.swift in Sources */,
+				B135EED32897483D00448803 /* IsEmail.swift in Sources */,
+				B17C13362896FDF6003BDB85 /* SwiftFormModel.swift in Sources */,
 				B13EE65028941792001B53A0 /* RegisterViewModel.swift in Sources */,
+				B135EEC72897477200448803 /* IsRequired.swift in Sources */,
+				B135EEDB289748C200448803 /* MinValue.swift in Sources */,
 				B1598BE428969A1A00600E91 /* CountryItemDataSource.swift in Sources */,
 				B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */,
 				B17E0FBF28949E7E0038D42A /* ProfileScreen.swift in Sources */,
 				B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */,
+				B135EEDD2897491500448803 /* MaxValue.swift in Sources */,
+				B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */,
+				B135EED9289748AB00448803 /* MaxLength.swift in Sources */,
 				B13EE6522894238B001B53A0 /* RegisterModel.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
 				B1DD017828802940004D875B /* FullWidth.swift in Sources */,
 				B1598BEF2896A41B00600E91 /* GetCountries.swift in Sources */,
+				B135EEC9289747B700448803 /* IsName.swift in Sources */,
+				B135EED72897488800448803 /* MinLength.swift in Sources */,
+				B135EECD2897480400448803 /* IsInteger.swift in Sources */,
 				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
 				B1DD017528802264004D875B /* ThemeFont.swift in Sources */,
+				B135EECF2897481800448803 /* IsNumber.swift in Sources */,
 				B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */,
 				B1598BE628969AE500600E91 /* CountryItemAPIImpl.swift in Sources */,
 				B1598BE828969DCC00600E91 /* APIServiceError.swift in Sources */,
@@ -513,9 +593,13 @@
 				B1598BEA2896A06E00600E91 /* CountryItemRepository.swift in Sources */,
 				B17E0FBA28949D4A0038D42A /* HomeScreen.swift in Sources */,
 				B17E0FC128949EDF0038D42A /* Constants.swift in Sources */,
+				B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */,
+				B135EED52897485100448803 /* IsDate.swift in Sources */,
+				B135EECB289747CB00448803 /* IsStrongPassword.swift in Sources */,
 				B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */,
 				B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */,
 				B1DD015A28801DFD004D875B /* ThemeColor.swift in Sources */,
+				B135EEDF2897492600448803 /* ExactSize.swift in Sources */,
 				B10542B828804EFA0071FF93 /* SystemIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

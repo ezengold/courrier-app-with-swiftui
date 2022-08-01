@@ -13,3 +13,10 @@ struct RegisterErrorsModel {
 	var fullName: String = ""
 	var email: String = ""
 }
+
+enum RegisterEnum: String {
+case fullName = "fullName"
+case email = "email"
+case phoneNumber = "phoneNumber"
+case countryCode = "countryCode"
+}
