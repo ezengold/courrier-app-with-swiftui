@@ -13,6 +13,10 @@ class IsRequired: SwiftFormRule {
 		return !value.isEmpty
 	}
 	
+	func valid(_ value: Any) -> Bool {
+		return true
+	}
+	
 	func error() -> String {
 		return message
 	}

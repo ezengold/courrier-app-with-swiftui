@@ -3,6 +3,11 @@ import Foundation
 protocol SwiftFormRule {
 	func valid(_ value: String) -> Bool
 	
+	/**
+	 For custom validations
+	 */
+	func valid(_ value: Any) -> Bool
+	
 	func error() -> String
 }
 
@@ -31,6 +36,10 @@ class SwiftFormRegexRule: SwiftFormRule {
 		return test.evaluate(with: value)
 	}
 	
+	func valid(_ value: Any) -> Bool {
+		return true
+	}
+	
 	func error() -> String {
 		return message
 	}
@@ -45,6 +54,10 @@ class SwiftFormCompairRule: SwiftFormRule {
 	
 	func valid(_ value: String) -> Bool {
 		return value.count >= Int(limit)
+	}
+	
+	func valid(_ value: Any) -> Bool {
+		return true
 	}
 	
 	func error() -> String {
