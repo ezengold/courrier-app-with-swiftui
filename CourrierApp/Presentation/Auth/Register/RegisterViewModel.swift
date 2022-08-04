@@ -1,19 +1,22 @@
 import Foundation
+import Combine
 
 class RegisterViewModel: ObservableObject {
 	var validator: SwiftFormValidator = SwiftFormValidator()
 	
 	@Published var loading: Bool = false
 	
-	@Published var fields: RegisterFieldsModel = RegisterFieldsModel()
+	@Published var fields: RegisterFieldsModel = RegisterFieldsModel { _,_  in	}
 	
 	@Published var errors: RegisterErrorsModel = RegisterErrorsModel()
 	
 	@Published var showCountryPicker: Bool = false
 	
 	@Published var isRemember: Bool = true
-	
+		
 	init() {
+		self.fields = RegisterFieldsModel(onChange: self.onInputChange)
+		
 		validator.fields.append(
 			SwiftFormField(name: RegisterEnum.email.rawValue, rules: [
 				RuleImpl.isRequired,

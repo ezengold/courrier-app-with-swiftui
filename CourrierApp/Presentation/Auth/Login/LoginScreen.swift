@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LoginScreen: View {
-	@StateObject var loginVM: LoginViewModel = LoginViewModel()
+	@StateObject var vm: LoginViewModel = LoginViewModel()
 	
 	var body: some View {
 		ZStack {
@@ -43,11 +43,11 @@ struct LoginScreen: View {
 					VStack(alignment: .leading, spacing: 0) {
 						FullWidth()
 						Button (action: {
-							loginVM.showCountryPicker.toggle()
+							vm.showCountryPicker.toggle()
 						}, label: {
 							GeometryReader { geometry in
 								HStack(alignment: .center, spacing: 0) {
-									if let country = loginVM.currentCountry {
+									if let country = vm.fields.country {
 										Text(country.flag ?? "")
 											.padding(.leading, 10)
 											.padding(.trailing, 15)
@@ -78,8 +78,8 @@ struct LoginScreen: View {
 								.background(Color.white)
 							}
 						})
-						.sheet(isPresented: $loginVM.showCountryPicker) {
-							CountryPicker(currentCountry: $loginVM.currentCountry)
+						.sheet(isPresented: $vm.showCountryPicker) {
+							CountryPicker(currentCountry: $vm.fields.country)
 						}
 						
 						Rectangle()
@@ -98,7 +98,7 @@ struct LoginScreen: View {
 								)
 								.padding(.leading, 10)
 								.padding(.trailing, 15)
-								TextField("Enter Your Mobile Number", text: $loginVM.phoneNumber)
+								TextField("Enter Your Mobile Number", text: $vm.fields.phoneNumber)
 									.font(ThemeFont.medium(16))
 									.keyboardType(.numberPad)
 									.foregroundColor(ThemeColor.boldText)
@@ -116,7 +116,7 @@ struct LoginScreen: View {
 					.shadow(color: ThemeColor.borderBlue, radius: 19, x: 4, y: 6)
 					.overlay {
 						RoundedRectangle(cornerRadius: 11)
-							.stroke(ThemeColor.borderBlue, lineWidth: 1)
+							.stroke(vm.errors.phoneNumber.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary, lineWidth: 1)
 					}
 					
 					Spacer(minLength: 30)
@@ -124,7 +124,7 @@ struct LoginScreen: View {
 						FullWidth()
 						GeometryReader { geometry in
 							HStack(alignment: .top, spacing: 0) {
-								Checkbox(checked: $loginVM.hasAcceptedPrivacy, size: 15)
+								Checkbox(checked: $vm.fields.privacy, color: vm.errors.privacy.isEmpty ? ThemeColor.primary : ThemeColor.danger, size: 15)
 									.padding(.top, 5)
 									.padding(.leading, 10)
 									.padding(.trailing, 15)
@@ -150,7 +150,7 @@ struct LoginScreen: View {
 						
 						GeometryReader { geometry in
 							HStack(alignment: .center, spacing: 0) {
-								Checkbox(checked: $loginVM.hasAcceptedPrivacy, size: 15)
+								Checkbox(checked: $vm.fields.terms, color: vm.errors.terms.isEmpty ? ThemeColor.primary : ThemeColor.danger, size: 15)
 									.padding(.leading, 10)
 									.padding(.trailing, 15)
 								Group {
@@ -175,18 +175,30 @@ struct LoginScreen: View {
 					VStack(alignment: .center, spacing: 0) {
 						FullWidth()
 						Button {
-							//
+							vm.onLogin()
 						} label: {
-							Text("Login Now")
-								.font(ThemeFont.medium(19))
-								.frame(maxWidth: .infinity)
-								.frame(height: 54, alignment: .center)
-								.foregroundColor(Color.white)
-								.background(
-									RoundedRectangle(cornerRadius: 7)
-										.fill(ThemeColor.primary)
-										.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
-								)
+							if vm.loading {
+								ProgressView()
+									.progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+									.frame(maxWidth: .infinity)
+									.frame(height: 54, alignment: .center)
+									.background(
+										RoundedRectangle(cornerRadius: 7)
+											.fill(ThemeColor.primary)
+											.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
+									)
+							} else {
+								Text("Login Now")
+									.font(ThemeFont.medium(19))
+									.frame(maxWidth: .infinity)
+									.frame(height: 54, alignment: .center)
+									.foregroundColor(Color.white)
+									.background(
+										RoundedRectangle(cornerRadius: 7)
+											.fill(vm.validator.isFormValid ? ThemeColor.primary : ThemeColor.primary.opacity(0.5))
+											.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
+									)
+							}
 						}
 						Spacer(minLength: 40)
 						

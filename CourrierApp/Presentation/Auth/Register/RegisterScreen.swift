@@ -70,30 +70,22 @@ struct RegisterScreen: View {
 								.sheet(isPresented: $vm.showCountryPicker) {
 									CountryPicker(currentCountry: $vm.fields.country)
 								}
-							TextField(
-								"Phone number",
-								text: $vm.fields.phoneNumber,
-								onEditingChanged: { updated in vm.onInputChange(field: .phoneNumber, value: vm.fields.phoneNumber)}
-							)
-							.font(ThemeFont.medium(16))
-							.keyboardType(.numberPad)
-							.padding(.horizontal)
-							.frame(height: 55)
-							.frame(maxWidth: .infinity)
-							.background(ThemeColor.background)
-							.overlay {
-								RoundedRectangle(cornerRadius: 11)
-									.stroke(
-										vm.errors.phoneNumber.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary,
-										lineWidth: 1
-									)
-							}
+							TextField("Phone number", text: $vm.fields.phoneNumber)
+								.font(ThemeFont.medium(16))
+								.keyboardType(.numberPad)
+								.padding(.horizontal)
+								.frame(height: 55)
+								.frame(maxWidth: .infinity)
+								.background(ThemeColor.background)
+								.overlay {
+									RoundedRectangle(cornerRadius: 11)
+										.stroke(
+											vm.errors.phoneNumber.isEmpty ? ThemeColor.borderBlue : ThemeColor.primary,
+											lineWidth: 1
+										)
+								}
 						}
-						TextField(
-							"Enter your name",
-							text: $vm.fields.fullName,
-							onEditingChanged: { updated in vm.onInputChange(field: .fullName, value: vm.fields.fullName)}
-						)
+						TextField("Enter your name", text: $vm.fields.fullName)
 							.font(ThemeFont.medium(16))
 							.padding(.leading, 45)
 							.padding(.trailing)
@@ -112,11 +104,7 @@ struct RegisterScreen: View {
 									.frame(width: 25, height: 25, alignment: .center)
 									.position(x: 25, y: 28)
 							}
-						TextField(
-							"Enter your email address",
-							text: $vm.fields.email,
-							onEditingChanged: { updated in vm.onInputChange(field: .email, value: vm.fields.email)}
-						)
+						TextField("Enter your email address", text: $vm.fields.email)
 							.keyboardType(.emailAddress)
 							.font(ThemeFont.medium(16))
 							.keyboardType(.numberPad)
@@ -160,12 +148,7 @@ struct RegisterScreen: View {
 									.background(
 										RoundedRectangle(cornerRadius: 7)
 											.fill(ThemeColor.primary)
-											.shadow(
-												color: ThemeColor.buttonShadow,
-												radius: 10,
-												x: -5,
-												y: 5
-											)
+											.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
 									)
 							} else {
 								Text("Register")
@@ -176,12 +159,7 @@ struct RegisterScreen: View {
 									.background(
 										RoundedRectangle(cornerRadius: 7)
 											.fill(ThemeColor.primary)
-											.shadow(
-												color: ThemeColor.buttonShadow,
-												radius: 10,
-												x: -5,
-												y: 5
-											)
+											.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
 									)
 							}
 						}

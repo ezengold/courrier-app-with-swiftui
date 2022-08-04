@@ -104,4 +104,8 @@ struct RuleImpl {
 	static func exactSize(_ limit: Int) -> SwiftFormRule {
 		return ExactSize(limit: limit)
 	}
+	
+	static func equalsTo(_ value: Any) -> SwiftFormRule {
+		return IsEqualsTo(match: value)
+	}
 }

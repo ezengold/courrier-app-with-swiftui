@@ -23,6 +23,9 @@
 		B135EEDF2897492600448803 /* ExactSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEDE2897492600448803 /* ExactSize.swift */; };
 		B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE64D28941768001B53A0 /* RegisterScreen.swift */; };
 		B13EE65028941792001B53A0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EE64F28941792001B53A0 /* RegisterViewModel.swift */; };
+		B14845E2289B2D0B0016242C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14845E1289B2D0B0016242C /* LoginModel.swift */; };
+		B14845E4289B365C0016242C /* IsEqualsTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14845E3289B365C0016242C /* IsEqualsTo.swift */; };
+		B14845E6289B395C0016242C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14845E5289B395C0016242C /* Helpers.swift */; };
 		B1598BE22896999200600E91 /* CountryItemAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1598BE12896999200600E91 /* CountryItemAPIEntity.swift */; };
 		B1598BE428969A1A00600E91 /* CountryItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1598BE328969A1A00600E91 /* CountryItemDataSource.swift */; };
 		B1598BE628969AE500600E91 /* CountryItemAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1598BE528969AE500600E91 /* CountryItemAPIImpl.swift */; };
@@ -85,6 +88,9 @@
 		B135EEDE2897492600448803 /* ExactSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactSize.swift; sourceTree = "<group>"; };
 		B13EE64D28941768001B53A0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B13EE64F28941792001B53A0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B14845E1289B2D0B0016242C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B14845E3289B365C0016242C /* IsEqualsTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsEqualsTo.swift; sourceTree = "<group>"; };
+		B14845E5289B395C0016242C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B1598BE12896999200600E91 /* CountryItemAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItemAPIEntity.swift; sourceTree = "<group>"; };
 		B1598BE328969A1A00600E91 /* CountryItemDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItemDataSource.swift; sourceTree = "<group>"; };
 		B1598BE528969AE500600E91 /* CountryItemAPIImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItemAPIImpl.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 				B135EEDA289748C200448803 /* MinValue.swift */,
 				B135EEDC2897491500448803 /* MaxValue.swift */,
 				B135EEDE2897492600448803 /* ExactSize.swift */,
+				B14845E3289B365C0016242C /* IsEqualsTo.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -224,6 +231,7 @@
 			children = (
 				B1A2EB262893C4C0006221CC /* CountryItem.swift */,
 				B1ABFB4D289804270028AC41 /* RegisterModel.swift */,
+				B14845E1289B2D0B0016242C /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,6 +448,7 @@
 				B17E0FC028949EDF0038D42A /* Constants.swift */,
 				B1598BE728969DCC00600E91 /* APIServiceError.swift */,
 				B1598BF02896A48F00600E91 /* UseCaseError.swift */,
+				B14845E5289B395C0016242C /* Helpers.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -583,6 +592,9 @@
 				B135EECF2897481800448803 /* IsNumber.swift in Sources */,
 				B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */,
 				B1598BE628969AE500600E91 /* CountryItemAPIImpl.swift in Sources */,
+				B14845E4289B365C0016242C /* IsEqualsTo.swift in Sources */,
+				B14845E2289B2D0B0016242C /* LoginModel.swift in Sources */,
+				B14845E6289B395C0016242C /* Helpers.swift in Sources */,
 				B1598BE828969DCC00600E91 /* APIServiceError.swift in Sources */,
 				B1598BF12896A48F00600E91 /* UseCaseError.swift in Sources */,
 				B1ABFB4E289804270028AC41 /* RegisterModel.swift in Sources */,
