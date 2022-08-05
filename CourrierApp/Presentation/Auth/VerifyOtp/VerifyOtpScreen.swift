@@ -43,9 +43,7 @@ struct VerifyOtpScreen: View {
 						length: 5,
 						spacing: 15,
 						maxWidth: geometry.size.width
-					) { _,_ in
-						//
-					}
+					) { code,_ in vm.otpCode = code}
 				}
 				Spacer()
 			}
@@ -61,6 +59,11 @@ struct VerifyOtpScreen: View {
 				Text(vm.timeRemainingStr)
 					.foregroundColor(ThemeColor.text)
 					.font(ThemeFont.bold(17))
+					.onReceive(vm.timer) { _ in
+						if vm.timeRemaining > 0 {
+							vm.timeRemaining -= 1
+						}
+					}
 				HStack {
 					Text("Didn’t Receive The code ?")
 						.foregroundColor(ThemeColor.text)
@@ -70,7 +73,7 @@ struct VerifyOtpScreen: View {
 						.font(ThemeFont.medium(15))
 				}
 				Button {
-					//
+					vm.onVerifyOtp()
 				} label: {
 					if vm.loading {
 						ProgressView()
@@ -90,9 +93,10 @@ struct VerifyOtpScreen: View {
 							.foregroundColor(Color.white)
 							.background(
 								RoundedRectangle(cornerRadius: 7)
-									.fill(ThemeColor.primary)
-									.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
+									.fill(vm.otpCode.isEmpty ? Color.gray : ThemeColor.primary)
+									.shadow(color: vm.otpCode.isEmpty ? Color.clear : ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
 							)
+							.disabled(vm.otpCode.isEmpty)
 					}
 				}
 			}

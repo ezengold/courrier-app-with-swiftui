@@ -12,19 +12,19 @@ struct LoginFieldsModel {
 	
 	var country: CountryItem? = .DEFAULT_COUNTRY
 	
-	var phoneNumber: String = "123456478" {
+	var phoneNumber: String = "" {
 		didSet {
 			callback(.phoneNumber, phoneNumber)
 		}
 	}
 	
-	var privacy: Bool = true {
+	var privacy: Bool = false {
 		didSet {
 			callback(.privacy, privacy)
 		}
 	}
 	
-	var terms: Bool = true {
+	var terms: Bool = false {
 		didSet {
 			callback(.terms, terms)
 		}
