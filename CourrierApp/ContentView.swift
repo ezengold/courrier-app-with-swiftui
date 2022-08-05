@@ -22,3 +22,13 @@ extension UIApplication {
 		sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 	}
 }
+
+extension String {
+	func chartAt(at index: Int) -> String {
+		if index >= 0 && index < self.count {
+			return String(self[self.index(self.startIndex, offsetBy: index)])
+		}
+		
+		return ""
+	}
+}

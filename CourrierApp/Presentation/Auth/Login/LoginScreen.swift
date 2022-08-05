@@ -195,9 +195,12 @@ struct LoginScreen: View {
 									.foregroundColor(Color.white)
 									.background(
 										RoundedRectangle(cornerRadius: 7)
-											.fill(vm.validator.isFormValid ? ThemeColor.primary : ThemeColor.primary.opacity(0.5))
+											.fill(ThemeColor.primary)
 											.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
 									)
+								NavigationLink(destination: VerifyOtpScreen(loginFields: vm.fields), isActive: $vm.pushVerifyOtp) {
+									EmptyView()
+								}
 							}
 						}
 						Spacer(minLength: 40)

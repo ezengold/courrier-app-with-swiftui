@@ -12,6 +12,9 @@ class LoginViewModel: ObservableObject {
 	
 	@Published var showCountryPicker: Bool = false
 	
+	// NAVIGATION
+	@Published var pushVerifyOtp: Bool = false
+	
 	init() {
 		self.fields = LoginFieldsModel(onChange: self.onInputChange)
 		
@@ -50,8 +53,6 @@ class LoginViewModel: ObservableObject {
 	}
 	
 	func onLogin() {
-		loading = true
-		
 		// perform global validation
 		validator.validateForm(values: [
 			LoginEnum.countryCode.rawValue: fields.country?.countryCode ?? "",
@@ -61,8 +62,12 @@ class LoginViewModel: ObservableObject {
 		])
 		updateErrors()
 		
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-			self.loading = false
+		if validator.isFormValid {
+			loading = true
+			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+				self.loading = false
+				self.pushVerifyOtp = true
+			}
 		}
 	}
 	

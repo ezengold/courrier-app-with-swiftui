@@ -12,19 +12,19 @@ struct LoginFieldsModel {
 	
 	var country: CountryItem? = .DEFAULT_COUNTRY
 	
-	var phoneNumber: String = "" {
+	var phoneNumber: String = "123456478" {
 		didSet {
 			callback(.phoneNumber, phoneNumber)
 		}
 	}
 	
-	var privacy: Bool = false {
+	var privacy: Bool = true {
 		didSet {
 			callback(.privacy, privacy)
 		}
 	}
 	
-	var terms: Bool = false {
+	var terms: Bool = true {
 		didSet {
 			callback(.terms, terms)
 		}
@@ -33,6 +33,8 @@ struct LoginFieldsModel {
 	init(onChange: (@escaping (LoginEnum, Any) -> Void)) {
 		self.callback = onChange
 	}
+	
+	static var DEFAULT: LoginFieldsModel = LoginFieldsModel { _, _ in  }
 }
 
 struct LoginErrorsModel {

@@ -36,6 +36,8 @@
 		B1598BF12896A48F00600E91 /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1598BF02896A48F00600E91 /* UseCaseError.swift */; };
 		B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113828807D1D00A40DBA /* Checkbox.swift */; };
 		B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113A2880881F00A40DBA /* LoginScreen.swift */; };
+		B17B8222289CFF65004AA2E5 /* VerifyOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */; };
+		B17B8224289CFF80004AA2E5 /* VerifyOtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */; };
 		B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */; };
 		B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C13312896F220003BDB85 /* SwiftFormRule.swift */; };
 		B17C13362896FDF6003BDB85 /* SwiftFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C13352896FDF6003BDB85 /* SwiftFormModel.swift */; };
@@ -68,6 +70,7 @@
 		B1DD017528802264004D875B /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD017428802264004D875B /* ThemeFont.swift */; };
 		B1DD017828802940004D875B /* FullWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD017728802940004D875B /* FullWidth.swift */; };
 		B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */; };
+		B1F89543289D214D00B8CE6D /* OtpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F89542289D214D00B8CE6D /* OtpField.swift */; };
 		B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +104,8 @@
 		B1598BF02896A48F00600E91 /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
 		B15C113828807D1D00A40DBA /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B15C113A2880881F00A40DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpScreen.swift; sourceTree = "<group>"; };
+		B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpViewModel.swift; sourceTree = "<group>"; };
 		B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormValidator.swift; sourceTree = "<group>"; };
 		B17C13312896F220003BDB85 /* SwiftFormRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormRule.swift; sourceTree = "<group>"; };
 		B17C13352896FDF6003BDB85 /* SwiftFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormModel.swift; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 		B1DD017428802264004D875B /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		B1DD017728802940004D875B /* FullWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidth.swift; sourceTree = "<group>"; };
 		B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B1F89542289D214D00B8CE6D /* OtpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpField.swift; sourceTree = "<group>"; };
 		B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +299,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		B17B8220289CFF2B004AA2E5 /* VerifyOtp */ = {
+			isa = PBXGroup;
+			children = (
+				B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */,
+				B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */,
+			);
+			path = VerifyOtp;
+			sourceTree = "<group>";
+		};
 		B17C132D2896F155003BDB85 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,7 +428,7 @@
 		B1C7E3652880151100A6FA17 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B1A2EB212893C3EF006221CC /* CountryPicker */,
+				B1F89540289D210300B8CE6D /* Components */,
 				B17E0FB528949C8F0038D42A /* Profile */,
 				B17E0FB428949C7E0038D42A /* Bookings */,
 				B17E0FB328949C760038D42A /* Home */,
@@ -425,6 +440,7 @@
 		B1C7E3662880153B00A6FA17 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B17B8220289CFF2B004AA2E5 /* VerifyOtp */,
 				B13EE64C2894174A001B53A0 /* Register */,
 				B1C7E3672880154800A6FA17 /* Login */,
 			);
@@ -481,6 +497,23 @@
 				B15C113828807D1D00A40DBA /* Checkbox.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B1F89540289D210300B8CE6D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B1F89541289D211200B8CE6D /* OtpField */,
+				B1A2EB212893C3EF006221CC /* CountryPicker */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B1F89541289D211200B8CE6D /* OtpField */ = {
+			isa = PBXGroup;
+			children = (
+				B1F89542289D214D00B8CE6D /* OtpField.swift */,
+			);
+			path = OtpField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +622,9 @@
 				B135EECD2897480400448803 /* IsInteger.swift in Sources */,
 				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
 				B1DD017528802264004D875B /* ThemeFont.swift in Sources */,
+				B17B8222289CFF65004AA2E5 /* VerifyOtpScreen.swift in Sources */,
+				B17B8224289CFF80004AA2E5 /* VerifyOtpViewModel.swift in Sources */,
+				B1F89543289D214D00B8CE6D /* OtpField.swift in Sources */,
 				B135EECF2897481800448803 /* IsNumber.swift in Sources */,
 				B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */,
 				B1598BE628969AE500600E91 /* CountryItemAPIImpl.swift in Sources */,

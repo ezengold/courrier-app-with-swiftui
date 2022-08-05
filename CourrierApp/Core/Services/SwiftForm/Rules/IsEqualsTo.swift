@@ -25,7 +25,6 @@ class IsEqualsTo: SwiftFormRule {
 	}
 	
 	func valid(_ value: Any) -> Bool {
-		print(["value": value, "match": self.match ?? "nil"])
 		if let safeMatch = self.match {
 			return Helpers.isEqual(a: safeMatch, b: value)
 		} else {
