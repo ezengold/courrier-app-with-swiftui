@@ -5,6 +5,10 @@ import SwiftUI
 class VerifyOtpViewModel: ObservableObject {
 	var loginFields: LoginFieldsModel = LoginFieldsModel { _, _ in	}
 	
+	var auth: AuthModel = .DEFAULT
+	
+	var onChange: (AuthModel) -> Void = { _ in }
+	
 	@Published var loading: Bool = false
 	
 	@Published var otpCode: String = ""
@@ -21,10 +25,37 @@ class VerifyOtpViewModel: ObservableObject {
 	
 	let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 	
+	func setupViewModel(fields: LoginFieldsModel, auth: AuthModel, onAuthChange: @escaping ((AuthModel) -> Void)) {
+		self.loginFields = fields
+		self.auth = auth
+		self.onChange = onAuthChange
+	}
+	
 	func onVerifyOtp() -> Void {
 		loading = true
-		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-			self.loading = false
+		do {
+			auth.fullName = "JOHN Doe"
+			auth.email = "johndoe@gmail.com"
+			auth.phoneNumber = loginFields.phoneNumber
+			auth.countryCode = loginFields.country?.countryCode ?? "+91"
+			auth.status = AuthModel.ACTIVE_STATUS
+			
+			auth.id = "1"
+			auth.token = "CfDJ8OW5OI0CPGJBgSNlGwO0x4YF7qbYKVv7KOO-N0eFtDUzXOrL7F9Xd9W1otVi4ueJOkAmAhuoHFWNkqRaFD7zvAMHMSKncl6Vo5QXKmpvy6vqxOKxSURdIey8aZPRi3Nnhp2p9la-Al5xrVKz0lignRdcCHf3O7pF9zv_sNx_c_T7pUe3WsxaJEPX3t_9FO2Wjw"
+			
+			let encodedData = try JSONEncoder().encode(auth)
+			
+			UserDefaults.standard.set(String(data: encodedData, encoding: .utf8), forKey: Constants.AUTH_STORAGE_KEY)
+			
+			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+				self.loading = false
+				self.onChange(self.auth)
+			}
+		} catch {
+			// print error
+			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+				self.loading = false
+			}
 		}
 	}
 }

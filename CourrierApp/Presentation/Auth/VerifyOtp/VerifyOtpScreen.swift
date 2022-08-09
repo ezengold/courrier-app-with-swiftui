@@ -6,6 +6,8 @@ struct VerifyOtpScreen: View {
 	// ROUTE PARAMS
 	var loginFields: LoginFieldsModel
 	
+	@EnvironmentObject var auth: AuthModel
+	
 	@StateObject var vm: VerifyOtpViewModel = VerifyOtpViewModel()
 	
 	var body: some View {
@@ -50,7 +52,11 @@ struct VerifyOtpScreen: View {
 			.padding(.horizontal, 20)
 			.padding(.bottom, 50)
 			.onAppear() {
-				vm.loginFields = loginFields
+				vm.setupViewModel(
+					fields: loginFields,
+					auth: auth,
+					onAuthChange: auth.setInstance
+				)
 			}
 			.onTapGesture {
 				UIApplication.shared.dismissKeyboard()

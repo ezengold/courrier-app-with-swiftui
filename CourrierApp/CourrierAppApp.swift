@@ -68,3 +68,20 @@ extension Color {
 		self.init(red: r, green: g, blue: b, opacity: a)
 	}
 }
+
+
+extension UIApplication {
+	func dismissKeyboard() {
+		sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+	}
+}
+
+extension String {
+	func chartAt(at index: Int) -> String {
+		if index >= 0 && index < self.count {
+			return String(self[self.index(self.startIndex, offsetBy: index)])
+		}
+		
+		return ""
+	}
+}

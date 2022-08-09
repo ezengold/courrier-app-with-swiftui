@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LoginScreen: View {
 	@StateObject var vm: LoginViewModel = LoginViewModel()
-	
+		
 	var body: some View {
 		ZStack {
 			ThemeColor.background
@@ -198,9 +198,6 @@ struct LoginScreen: View {
 											.fill(ThemeColor.primary)
 											.shadow(color: ThemeColor.buttonShadow, radius: 10, x: -5, y: 5)
 									)
-								NavigationLink(destination: VerifyOtpScreen(loginFields: vm.fields), isActive: $vm.pushVerifyOtp) {
-									EmptyView()
-								}
 							}
 						}
 						Spacer(minLength: 40)
@@ -216,6 +213,7 @@ struct LoginScreen: View {
 							.foregroundColor(ThemeColor.boldText)
 							.font(ThemeFont.semiBold(14))
 					}
+					NavigationLink("", destination: VerifyOtpScreen(loginFields: vm.fields), isActive: $vm.pushVerifyOtp)
 				}
 				.padding(.horizontal, 20)
 				.padding(.bottom, 20)
