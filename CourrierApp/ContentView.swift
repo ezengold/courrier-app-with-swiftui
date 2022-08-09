@@ -3,6 +3,8 @@ import SwiftUI
 struct ContentView: View {
 	@State var loading: Bool = false
 	
+	@AppStorage(Constants.AUTH_STORAGE_KEY) var authJson: String = ""
+	
 	@StateObject var auth: AuthModel = AuthModel()
 	
 	var body: some View {
@@ -31,7 +33,9 @@ struct ContentView: View {
 	}
 	
 	func fetchAuth() {
-		if let data = UserDefaults.standard.value(forKey: Constants.AUTH_STORAGE_KEY) as? Data {
+		let data = Data(authJson.utf8)
+		
+		if !data.isEmpty {
 			loading = true
 			do {
 				let user = try JSONDecoder().decode(AuthModel.self, from: data)
@@ -52,8 +56,6 @@ struct ContentView: View {
 					loading = false
 				}
 			}
-		} else {
-			print("noting in storage")
 		}
 	}
 }

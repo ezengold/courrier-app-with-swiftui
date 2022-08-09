@@ -3,6 +3,8 @@ import SwiftUI
 
 
 class VerifyOtpViewModel: ObservableObject {
+	@AppStorage(Constants.AUTH_STORAGE_KEY) var authJson: String = ""
+	
 	var loginFields: LoginFieldsModel = LoginFieldsModel { _, _ in	}
 	
 	var auth: AuthModel = .DEFAULT
@@ -39,13 +41,11 @@ class VerifyOtpViewModel: ObservableObject {
 			auth.phoneNumber = loginFields.phoneNumber
 			auth.countryCode = loginFields.country?.countryCode ?? "+91"
 			auth.status = AuthModel.ACTIVE_STATUS
-			
 			auth.id = "1"
 			auth.token = "CfDJ8OW5OI0CPGJBgSNlGwO0x4YF7qbYKVv7KOO-N0eFtDUzXOrL7F9Xd9W1otVi4ueJOkAmAhuoHFWNkqRaFD7zvAMHMSKncl6Vo5QXKmpvy6vqxOKxSURdIey8aZPRi3Nnhp2p9la-Al5xrVKz0lignRdcCHf3O7pF9zv_sNx_c_T7pUe3WsxaJEPX3t_9FO2Wjw"
 			
 			let encodedData = try JSONEncoder().encode(auth)
-			
-			UserDefaults.standard.set(String(data: encodedData, encoding: .utf8), forKey: Constants.AUTH_STORAGE_KEY)
+			authJson = String(data: encodedData, encoding: .utf8) ?? authJson
 			
 			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 				self.loading = false
