@@ -42,6 +42,8 @@
 		B1645B0328A47F5B00D9AF9A /* TabBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0228A47F5B00D9AF9A /* TabBarPreferenceKey.swift */; };
 		B1645B0528A47FB500D9AF9A /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0428A47FB500D9AF9A /* TabBarItem.swift */; };
 		B1645B0728A4869600D9AF9A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0628A4869600D9AF9A /* TabBarView.swift */; };
+		B1645B0928A4AE4E00D9AF9A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0828A4AE4E00D9AF9A /* HomeViewModel.swift */; };
+		B1645B0B28A4AEB000D9AF9A /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0A28A4AEB000D9AF9A /* LocationItem.swift */; };
 		B17B8222289CFF65004AA2E5 /* VerifyOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */; };
 		B17B8224289CFF80004AA2E5 /* VerifyOtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */; };
 		B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */; };
@@ -116,6 +118,8 @@
 		B1645B0228A47F5B00D9AF9A /* TabBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPreferenceKey.swift; sourceTree = "<group>"; };
 		B1645B0428A47FB500D9AF9A /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		B1645B0628A4869600D9AF9A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		B1645B0828A4AE4E00D9AF9A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B1645B0A28A4AEB000D9AF9A /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpScreen.swift; sourceTree = "<group>"; };
 		B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpViewModel.swift; sourceTree = "<group>"; };
 		B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormValidator.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				B1ABFB4D289804270028AC41 /* RegisterModel.swift */,
 				B14845E1289B2D0B0016242C /* LoginModel.swift */,
 				B1480D2928A038D700BE177A /* AuthModel.swift */,
+				B1645B0A28A4AEB000D9AF9A /* LocationItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				B17E0FB928949D4A0038D42A /* HomeScreen.swift */,
+				B1645B0828A4AE4E00D9AF9A /* HomeViewModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				B135EEDD2897491500448803 /* MaxValue.swift in Sources */,
 				B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */,
 				B135EED9289748AB00448803 /* MaxLength.swift in Sources */,
+				B1645B0B28A4AEB000D9AF9A /* LocationItem.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
 				B1DD017828802940004D875B /* FullWidth.swift in Sources */,
 				B1598BEF2896A41B00600E91 /* GetCountries.swift in Sources */,
@@ -677,6 +684,7 @@
 				B135EECB289747CB00448803 /* IsStrongPassword.swift in Sources */,
 				B1645B0528A47FB500D9AF9A /* TabBarItem.swift in Sources */,
 				B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */,
+				B1645B0928A4AE4E00D9AF9A /* HomeViewModel.swift in Sources */,
 				B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */,
 				B1DD015A28801DFD004D875B /* ThemeColor.swift in Sources */,
 				B135EEDF2897492600448803 /* ExactSize.swift in Sources */,

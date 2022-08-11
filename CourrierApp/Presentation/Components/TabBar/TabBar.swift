@@ -67,8 +67,12 @@ extension TabBar {
 		.frame(maxWidth: .infinity)
 		.background(Color.white)
 		.cornerRadius(12)
+		.overlay(
+			RoundedRectangle(cornerRadius: 11)
+				.stroke(ThemeColor.borderBlue, lineWidth: 1)
+		)
 		.padding([.horizontal, .bottom], 15)
-		.shadow(radius: 15)
+		.shadow(color: Color(.sRGB, red: 5.0/255, green: 27.0/255, blue: 40.0/255, opacity: 0.09), radius: 19, x: 4, y: 6)
 	}
 	
 	private func secondTabBarCell(tab: TabBarItem) -> some View {
