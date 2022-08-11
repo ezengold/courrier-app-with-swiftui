@@ -1,10 +1,3 @@
-//
-//  CourrierAppApp.swift
-//  CourrierApp
-//
-//  Created by ezen on 14/07/2022.
-//
-
 import SwiftUI
 
 @main

@@ -7,8 +7,7 @@ struct HomeScreen: View {
 		ZStack {
 			ThemeColor.background
 				.edgesIgnoringSafeArea(.all)
-			Text(auth.toString())
-				.padding(.horizontal, 40)
+			Text("HomeScreen")
 		}
 		.navigationBarHidden(true)
 	}

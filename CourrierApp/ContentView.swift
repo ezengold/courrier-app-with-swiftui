@@ -7,6 +7,8 @@ struct ContentView: View {
 	
 	@StateObject var auth: AuthModel = AuthModel()
 	
+	@State var currentTab: TabBarItem = .home
+	
 	var body: some View {
 		ZStack {
 			if loading {
@@ -14,9 +16,13 @@ struct ContentView: View {
 					.progressViewStyle(CircularProgressViewStyle(tint: ThemeColor.primary))
 			} else {
 				if !auth.id.isEmpty && !auth.token.isEmpty {
-					NavigationView {
-						// TODO - Put navigation
+					TabBarView(current: $currentTab) {
 						HomeScreen()
+							.tabBarItem(.home, current: $currentTab)
+						MyBookingScreen()
+							.tabBarItem(.bookings, current: $currentTab)
+						ProfileScreen()
+							.tabBarItem(.profile, current: $currentTab)
 					}
 				} else {
 					NavigationView {

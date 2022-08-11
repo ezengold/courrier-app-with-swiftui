@@ -37,6 +37,11 @@
 		B1598BF12896A48F00600E91 /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1598BF02896A48F00600E91 /* UseCaseError.swift */; };
 		B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113828807D1D00A40DBA /* Checkbox.swift */; };
 		B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C113A2880881F00A40DBA /* LoginScreen.swift */; };
+		B1645AFF28A47EFA00D9AF9A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645AFE28A47EFA00D9AF9A /* TabBar.swift */; };
+		B1645B0128A47F0A00D9AF9A /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0028A47F0A00D9AF9A /* TabBarModel.swift */; };
+		B1645B0328A47F5B00D9AF9A /* TabBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0228A47F5B00D9AF9A /* TabBarPreferenceKey.swift */; };
+		B1645B0528A47FB500D9AF9A /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0428A47FB500D9AF9A /* TabBarItem.swift */; };
+		B1645B0728A4869600D9AF9A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1645B0628A4869600D9AF9A /* TabBarView.swift */; };
 		B17B8222289CFF65004AA2E5 /* VerifyOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */; };
 		B17B8224289CFF80004AA2E5 /* VerifyOtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */; };
 		B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */; };
@@ -106,6 +111,11 @@
 		B1598BF02896A48F00600E91 /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
 		B15C113828807D1D00A40DBA /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B15C113A2880881F00A40DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B1645AFE28A47EFA00D9AF9A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B1645B0028A47F0A00D9AF9A /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		B1645B0228A47F5B00D9AF9A /* TabBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPreferenceKey.swift; sourceTree = "<group>"; };
+		B1645B0428A47FB500D9AF9A /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		B1645B0628A4869600D9AF9A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B17B8221289CFF65004AA2E5 /* VerifyOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpScreen.swift; sourceTree = "<group>"; };
 		B17B8223289CFF80004AA2E5 /* VerifyOtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpViewModel.swift; sourceTree = "<group>"; };
 		B17C132F2896F1A3003BDB85 /* SwiftFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFormValidator.swift; sourceTree = "<group>"; };
@@ -300,6 +310,18 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		B1645AFD28A47ED200D9AF9A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B1645AFE28A47EFA00D9AF9A /* TabBar.swift */,
+				B1645B0028A47F0A00D9AF9A /* TabBarModel.swift */,
+				B1645B0228A47F5B00D9AF9A /* TabBarPreferenceKey.swift */,
+				B1645B0428A47FB500D9AF9A /* TabBarItem.swift */,
+				B1645B0628A4869600D9AF9A /* TabBarView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		B17B8220289CFF2B004AA2E5 /* VerifyOtp */ = {
@@ -505,6 +527,7 @@
 		B1F89540289D210300B8CE6D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B1645AFD28A47ED200D9AF9A /* TabBar */,
 				B1F89541289D211200B8CE6D /* OtpField */,
 				B1A2EB212893C3EF006221CC /* CountryPicker */,
 			);
@@ -612,6 +635,7 @@
 				B135EEDB289748C200448803 /* MinValue.swift in Sources */,
 				B1598BE428969A1A00600E91 /* CountryItemDataSource.swift in Sources */,
 				B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */,
+				B1645B0128A47F0A00D9AF9A /* TabBarModel.swift in Sources */,
 				B17E0FBF28949E7E0038D42A /* ProfileScreen.swift in Sources */,
 				B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */,
 				B135EEDD2897491500448803 /* MaxValue.swift in Sources */,
@@ -621,6 +645,7 @@
 				B1DD017828802940004D875B /* FullWidth.swift in Sources */,
 				B1598BEF2896A41B00600E91 /* GetCountries.swift in Sources */,
 				B135EEC9289747B700448803 /* IsName.swift in Sources */,
+				B1645B0328A47F5B00D9AF9A /* TabBarPreferenceKey.swift in Sources */,
 				B135EED72897488800448803 /* MinLength.swift in Sources */,
 				B135EECD2897480400448803 /* IsInteger.swift in Sources */,
 				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
@@ -635,8 +660,10 @@
 				B1480D2A28A038D800BE177A /* AuthModel.swift in Sources */,
 				B14845E2289B2D0B0016242C /* LoginModel.swift in Sources */,
 				B14845E6289B395C0016242C /* Helpers.swift in Sources */,
+				B1645B0728A4869600D9AF9A /* TabBarView.swift in Sources */,
 				B1598BE828969DCC00600E91 /* APIServiceError.swift in Sources */,
 				B1598BF12896A48F00600E91 /* UseCaseError.swift in Sources */,
+				B1645AFF28A47EFA00D9AF9A /* TabBar.swift in Sources */,
 				B1ABFB4E289804270028AC41 /* RegisterModel.swift in Sources */,
 				B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */,
 				B1598BE22896999200600E91 /* CountryItemAPIEntity.swift in Sources */,
@@ -648,6 +675,7 @@
 				B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */,
 				B135EED52897485100448803 /* IsDate.swift in Sources */,
 				B135EECB289747CB00448803 /* IsStrongPassword.swift in Sources */,
+				B1645B0528A47FB500D9AF9A /* TabBarItem.swift in Sources */,
 				B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */,
 				B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */,
 				B1DD015A28801DFD004D875B /* ThemeColor.swift in Sources */,
