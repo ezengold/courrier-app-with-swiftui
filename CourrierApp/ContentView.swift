@@ -62,6 +62,10 @@ struct ContentView: View {
 					loading = false
 				}
 			}
+		} else {
+			self.auth.id = "1"
+			self.auth.fullName = "Ezen Gold"
+			self.auth.token = "loremipsumdolor"
 		}
 	}
 }

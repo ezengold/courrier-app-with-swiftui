@@ -16,7 +16,14 @@ struct HomeScreen: View {
 				Spacer()
 				footer
 			}
+			.sheet(isPresented: $vm.showVehiclePicker) {
+				PickVehicleScreen()
+			}
+			.fullScreenCover(isPresented: $vm.showPointPicker) {
+				PickPointScreen()
+			}
 		}
+		.environmentObject(vm)
 		.navigationBarHidden(true)
 	}
 	
@@ -52,7 +59,7 @@ struct HomeScreen: View {
 	private var footer: some View {
 		VStack {
 			Button {
-				//
+				vm.showPointPicker = true
 			} label: {
 				HStack {
 					ImageIcon(iconName: "Truck", contentMode: .fit, height: 25, width: 25, align: .center)

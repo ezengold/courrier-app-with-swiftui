@@ -13,7 +13,7 @@ struct ThemeColor {
 	static let primary = Color("PrimaryColor")
 	static let danger = Color("DangerColor")
 	static let success = Color("SuccessColor")
-	static let orange = Color("BackgroundColor")
+	static let orange = Color("OrangeColor")
 	static let blue = Color("BlueColor")
 	static let boldText = Color("BoldTextColor")
 	static let text = Color("TextColor")

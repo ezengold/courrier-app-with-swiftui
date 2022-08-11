@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		B10542B828804EFA0071FF93 /* SystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B728804EFA0071FF93 /* SystemIcon.swift */; };
 		B10542BA288051D30071FF93 /* ImageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10542B9288051D30071FF93 /* ImageIcon.swift */; };
+		B135C7AC28A5242100566266 /* PickPointScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7AB28A5242100566266 /* PickPointScreen.swift */; };
+		B135C7AF28A52F6A00566266 /* SearchPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7AE28A52F6A00566266 /* SearchPlaces.swift */; };
+		B135C7B128A5303400566266 /* LocationItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7B028A5303400566266 /* LocationItemRepository.swift */; };
+		B135C7B328A530EF00566266 /* LocationItemRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7B228A530EF00566266 /* LocationItemRepositoryImpl.swift */; };
+		B135C7B528A5316100566266 /* LocationItemAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7B428A5316100566266 /* LocationItemAPIImpl.swift */; };
+		B135C7B728A5319500566266 /* LocationItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7B628A5319400566266 /* LocationItemDataSource.swift */; };
+		B135C7B928A541BA00566266 /* PickVehicleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135C7B828A541BA00566266 /* PickVehicleScreen.swift */; };
 		B135EEC72897477200448803 /* IsRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEC62897477200448803 /* IsRequired.swift */; };
 		B135EEC9289747B700448803 /* IsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EEC8289747B700448803 /* IsName.swift */; };
 		B135EECB289747CB00448803 /* IsStrongPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135EECA289747CB00448803 /* IsStrongPassword.swift */; };
@@ -85,6 +92,13 @@
 /* Begin PBXFileReference section */
 		B10542B728804EFA0071FF93 /* SystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcon.swift; sourceTree = "<group>"; };
 		B10542B9288051D30071FF93 /* ImageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIcon.swift; sourceTree = "<group>"; };
+		B135C7AB28A5242100566266 /* PickPointScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPointScreen.swift; sourceTree = "<group>"; };
+		B135C7AE28A52F6A00566266 /* SearchPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaces.swift; sourceTree = "<group>"; };
+		B135C7B028A5303400566266 /* LocationItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemRepository.swift; sourceTree = "<group>"; };
+		B135C7B228A530EF00566266 /* LocationItemRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemRepositoryImpl.swift; sourceTree = "<group>"; };
+		B135C7B428A5316100566266 /* LocationItemAPIImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemAPIImpl.swift; sourceTree = "<group>"; };
+		B135C7B628A5319400566266 /* LocationItemDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemDataSource.swift; sourceTree = "<group>"; };
+		B135C7B828A541BA00566266 /* PickVehicleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickVehicleScreen.swift; sourceTree = "<group>"; };
 		B135EEC62897477200448803 /* IsRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsRequired.swift; sourceTree = "<group>"; };
 		B135EEC8289747B700448803 /* IsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsName.swift; sourceTree = "<group>"; };
 		B135EECA289747CB00448803 /* IsStrongPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsStrongPassword.swift; sourceTree = "<group>"; };
@@ -171,6 +185,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B135C7AD28A52F3500566266 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B135C7AE28A52F6A00566266 /* SearchPlaces.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		B135EEC52897466200448803 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				B1598BEB2896A0E300600E91 /* CountryItemRepositoryImpl.swift */,
+				B135C7B228A530EF00566266 /* LocationItemRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -244,6 +267,7 @@
 				B1598BF22896AE6A00600E91 /* DB */,
 				B1598BDF2896995D00600E91 /* API */,
 				B1598BE328969A1A00600E91 /* CountryItemDataSource.swift */,
+				B135C7B628A5319400566266 /* LocationItemDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -264,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				B1598BE92896A06E00600E91 /* CountryItemRepository.swift */,
+				B135C7B028A5303400566266 /* LocationItemRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -271,6 +296,7 @@
 		B1598BDE2896982100600E91 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				B135C7AD28A52F3500566266 /* HomeScreen */,
 				B1598BED2896A3EB00600E91 /* CountryPicker */,
 			);
 			path = UseCase;
@@ -280,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				B1598BF32896AE8B00600E91 /* Entity */,
+				B135C7B428A5316100566266 /* LocationItemAPIImpl.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -386,6 +413,8 @@
 			children = (
 				B17E0FB928949D4A0038D42A /* HomeScreen.swift */,
 				B1645B0828A4AE4E00D9AF9A /* HomeViewModel.swift */,
+				B135C7AB28A5242100566266 /* PickPointScreen.swift */,
+				B135C7B828A541BA00566266 /* PickVehicleScreen.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -635,6 +664,7 @@
 				B15C113928807D1D00A40DBA /* Checkbox.swift in Sources */,
 				B1598BEC2896A0E300600E91 /* CountryItemRepositoryImpl.swift in Sources */,
 				B135EED32897483D00448803 /* IsEmail.swift in Sources */,
+				B135C7AF28A52F6A00566266 /* SearchPlaces.swift in Sources */,
 				B17C13362896FDF6003BDB85 /* SwiftFormModel.swift in Sources */,
 				B13EE65028941792001B53A0 /* RegisterViewModel.swift in Sources */,
 				B135EEC72897477200448803 /* IsRequired.swift in Sources */,
@@ -646,6 +676,7 @@
 				B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */,
 				B135EEDD2897491500448803 /* MaxValue.swift in Sources */,
 				B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */,
+				B135C7B328A530EF00566266 /* LocationItemRepositoryImpl.swift in Sources */,
 				B135EED9289748AB00448803 /* MaxLength.swift in Sources */,
 				B1645B0B28A4AEB000D9AF9A /* LocationItem.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
@@ -655,6 +686,7 @@
 				B1645B0328A47F5B00D9AF9A /* TabBarPreferenceKey.swift in Sources */,
 				B135EED72897488800448803 /* MinLength.swift in Sources */,
 				B135EECD2897480400448803 /* IsInteger.swift in Sources */,
+				B135C7B928A541BA00566266 /* PickVehicleScreen.swift in Sources */,
 				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
 				B1DD017528802264004D875B /* ThemeFont.swift in Sources */,
 				B17B8222289CFF65004AA2E5 /* VerifyOtpScreen.swift in Sources */,
@@ -663,12 +695,15 @@
 				B135EECF2897481800448803 /* IsNumber.swift in Sources */,
 				B1C7E35A288013B600A6FA17 /* ContentView.swift in Sources */,
 				B1598BE628969AE500600E91 /* CountryItemAPIImpl.swift in Sources */,
+				B135C7B728A5319500566266 /* LocationItemDataSource.swift in Sources */,
 				B14845E4289B365C0016242C /* IsEqualsTo.swift in Sources */,
 				B1480D2A28A038D800BE177A /* AuthModel.swift in Sources */,
 				B14845E2289B2D0B0016242C /* LoginModel.swift in Sources */,
 				B14845E6289B395C0016242C /* Helpers.swift in Sources */,
+				B135C7B128A5303400566266 /* LocationItemRepository.swift in Sources */,
 				B1645B0728A4869600D9AF9A /* TabBarView.swift in Sources */,
 				B1598BE828969DCC00600E91 /* APIServiceError.swift in Sources */,
+				B135C7AC28A5242100566266 /* PickPointScreen.swift in Sources */,
 				B1598BF12896A48F00600E91 /* UseCaseError.swift in Sources */,
 				B1645AFF28A47EFA00D9AF9A /* TabBar.swift in Sources */,
 				B1ABFB4E289804270028AC41 /* RegisterModel.swift in Sources */,
@@ -676,6 +711,7 @@
 				B1598BE22896999200600E91 /* CountryItemAPIEntity.swift in Sources */,
 				B17E0FBC28949DD70038D42A /* MyBookingScreen.swift in Sources */,
 				B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */,
+				B135C7B528A5316100566266 /* LocationItemAPIImpl.swift in Sources */,
 				B1598BEA2896A06E00600E91 /* CountryItemRepository.swift in Sources */,
 				B17E0FBA28949D4A0038D42A /* HomeScreen.swift in Sources */,
 				B17E0FC128949EDF0038D42A /* Constants.swift in Sources */,

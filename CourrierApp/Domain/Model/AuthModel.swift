@@ -56,7 +56,6 @@ class AuthModel: ObservableObject, Codable {
 	}
 	
 	func setInstance(updated: AuthModel) {
-		print("updated", updated.toString())
 		self.fullName = updated.fullName
 		self.email = updated.email
 		self.phoneNumber = updated.phoneNumber
