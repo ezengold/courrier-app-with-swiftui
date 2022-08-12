@@ -16,13 +16,15 @@ struct ContentView: View {
 					.progressViewStyle(CircularProgressViewStyle(tint: ThemeColor.primary))
 			} else {
 				if !auth.id.isEmpty && !auth.token.isEmpty {
-					TabBarView(current: $currentTab) {
-						HomeScreen()
-							.tabBarItem(.home, current: $currentTab)
-						MyBookingScreen()
-							.tabBarItem(.bookings, current: $currentTab)
-						ProfileScreen()
-							.tabBarItem(.profile, current: $currentTab)
+					NavigationView {
+						TabBarView(current: $currentTab) {
+							HomeScreen()
+								.tabBarItem(.home, current: $currentTab)
+							MyBookingScreen()
+								.tabBarItem(.bookings, current: $currentTab)
+							ProfileScreen()
+								.tabBarItem(.profile, current: $currentTab)
+						}
 					}
 				} else {
 					NavigationView {

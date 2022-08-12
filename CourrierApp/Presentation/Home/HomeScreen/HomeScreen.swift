@@ -13,13 +13,18 @@ struct HomeScreen: View {
 				.frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height)
 			VStack {
 				heading
+				NavigationLink(
+					"",
+					destination: ConfirmDetailsScreen(vm: ConfirmDetailsViewModel(details: OrderSetupDetails(
+						startLocation: vm.currentLocation,
+						dropLocation: vm.dropLocation ?? LocationItem(title: "Ash. Dr. Sans john", description: "1901, thornridge Cir., Shiloh"),
+						vehicle: vm.tripVehicle ?? .pickup,
+						goodType: vm.goodType
+					))),
+					isActive: $vm.showConfirmDetails
+				)
 				Spacer()
 				footer
-				NavigationLink(isActive: $vm.showConfirmDetails) {
-					
-				} label: {
-					
-				}
 			}
 			.sheet(isPresented: $vm.showVehiclePicker) {
 				PickVehicleScreen()
@@ -30,9 +35,8 @@ struct HomeScreen: View {
 			.sheet(isPresented: $vm.showGoodTypePicker) {
 				PickGoodTypeScreen()
 			}
+			.environmentObject(vm)
 		}
-		.environmentObject(vm)
-		.navigationBarHidden(true)
 	}
 	
 	private var heading: some View {
@@ -67,7 +71,7 @@ struct HomeScreen: View {
 	private var footer: some View {
 		VStack {
 			Button {
-				vm.pushLocationPicker()
+				vm.pushLocationPicker(false)
 			} label: {
 				HStack {
 					ImageIcon(iconName: "Truck", contentMode: .fit, height: 25, width: 25, align: .center)

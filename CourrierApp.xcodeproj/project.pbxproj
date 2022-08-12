@@ -62,6 +62,8 @@
 		B17E0FC128949EDF0038D42A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FC028949EDF0038D42A /* Constants.swift */; };
 		B198D4AE28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198D4AD28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift */; };
 		B198D4B128A6FDBC0092D2A5 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198D4B028A6FDBC0092D2A5 /* Heading.swift */; };
+		B198D4B328A703450092D2A5 /* ConfirmDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198D4B228A703450092D2A5 /* ConfirmDetailsViewModel.swift */; };
+		B198D4B528A703E30092D2A5 /* OrderSetupDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198D4B428A703E30092D2A5 /* OrderSetupDetails.swift */; };
 		B1A2EB232893C481006221CC /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A2EB222893C481006221CC /* countries.json */; };
 		B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */; };
 		B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB262893C4C0006221CC /* CountryItem.swift */; };
@@ -149,6 +151,8 @@
 		B17E0FC028949EDF0038D42A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B198D4AD28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDetailsScreen.swift; sourceTree = "<group>"; };
 		B198D4B028A6FDBC0092D2A5 /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
+		B198D4B228A703450092D2A5 /* ConfirmDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDetailsViewModel.swift; sourceTree = "<group>"; };
+		B198D4B428A703E30092D2A5 /* OrderSetupDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSetupDetails.swift; sourceTree = "<group>"; };
 		B1A2EB222893C481006221CC /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
 		B1A2EB262893C4C0006221CC /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 				B1480D2928A038D700BE177A /* AuthModel.swift */,
 				B1645B0A28A4AEB000D9AF9A /* LocationItem.swift */,
 				B1F5F27B28A6AC4500A49B9A /* Vehicle.swift */,
+				B198D4B428A703E30092D2A5 /* OrderSetupDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				B198D4AD28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift */,
+				B198D4B228A703450092D2A5 /* ConfirmDetailsViewModel.swift */,
 			);
 			path = ConfirmDetailsScreen;
 			sourceTree = "<group>";
@@ -747,10 +753,12 @@
 				B1598BEA2896A06E00600E91 /* CountryItemRepository.swift in Sources */,
 				B17E0FBA28949D4A0038D42A /* HomeScreen.swift in Sources */,
 				B17E0FC128949EDF0038D42A /* Constants.swift in Sources */,
+				B198D4B328A703450092D2A5 /* ConfirmDetailsViewModel.swift in Sources */,
 				B17C13302896F1A3003BDB85 /* SwiftFormValidator.swift in Sources */,
 				B135EED52897485100448803 /* IsDate.swift in Sources */,
 				B135EECB289747CB00448803 /* IsStrongPassword.swift in Sources */,
 				B1645B0528A47FB500D9AF9A /* TabBarItem.swift in Sources */,
+				B198D4B528A703E30092D2A5 /* OrderSetupDetails.swift in Sources */,
 				B13EE64E28941768001B53A0 /* RegisterScreen.swift in Sources */,
 				B1645B0928A4AE4E00D9AF9A /* HomeViewModel.swift in Sources */,
 				B1C7E358288013B600A6FA17 /* CourrierAppApp.swift in Sources */,

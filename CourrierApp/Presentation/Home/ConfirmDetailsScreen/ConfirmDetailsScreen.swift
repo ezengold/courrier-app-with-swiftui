@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ConfirmDetailsScreen: View {
+	@StateObject var vm: ConfirmDetailsViewModel
+	
 	@Environment(\.presentationMode) var presentationMode
 	
 	var body: some View {
@@ -17,7 +19,7 @@ struct ConfirmDetailsScreen: View {
 					.frame(height: 3)
 				ScrollView(.vertical, showsIndicators: false) {
 					VStack(spacing: 0) {
-						Text("Lorem ipsm")
+						Text(vm.details.dropLocation.title)
 						Spacer()
 					}
 					.padding(.horizontal, 15)
@@ -25,13 +27,14 @@ struct ConfirmDetailsScreen: View {
 					.padding(.top, 15)
 				}
 			}
+			.navigationBarHidden(true)
 		}
 	}
 }
 
 struct ConfirmDetailsScreen_Previews: PreviewProvider {
 	static var previews: some View {
-		ConfirmDetailsScreen()
+		ConfirmDetailsScreen(vm: ConfirmDetailsViewModel(details: .DEFAULT))
 			.previewDevice("iPhone 12")
 	}
 }

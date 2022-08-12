@@ -86,6 +86,7 @@ struct PickPointScreen: View {
 						.font(ThemeFont.medium(16))
 						.keyboardType(.default)
 						.foregroundColor(ThemeColor.boldText)
+						.padding(.vertical, 15)
 						.frame(width: geometry.size.width - 125, alignment: .leading)
 						.padding(.trailing, 15)
 					SystemIcon(
@@ -97,7 +98,7 @@ struct PickPointScreen: View {
 						align: .center
 					)
 					.font(vm.dropLocation != nil ? ThemeFont.bold(15) : ThemeFont.regular(15))
-					.padding(.horizontal, 15)
+					.padding(15)
 					.onTapGesture {
 						if vm.dropLocation != nil {
 							vm.pushVehiclePicker()

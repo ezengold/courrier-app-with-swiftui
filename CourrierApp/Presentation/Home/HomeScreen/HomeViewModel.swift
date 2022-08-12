@@ -13,21 +13,12 @@ class HomeViewModel: ObservableObject {
 		"House Shifting",
 		"Ceramics / Sanitary / hardware",
 		"Paper / Packaging / Printed Material",
-		"Paper / Packaging / Printed Material",
-		"Chemical / paints",
-		"Paper / Packaging / Printed Material",
-		"Chemical / paints",
-		"Chemical / paints",
 		"Chemical / paints",
 		"Paper / Packaging / Printed Material",
 		"Logisitics Service provide / packers and movers",
 		"perishable food items",
-		"Chemical / paints",
-		"Chemical / paints",
 		"Furniture / Home Furnishing",
-		"Chemical / paints",
 		"Paper / Packaging / Printed Material",
-		"Chemical / paints",
 	]
 	
 	@Published var currentLocation: LocationItem = LocationItem(title: "Your Location", description: "3891, Ranchview, LA, NY")
@@ -74,7 +65,13 @@ class HomeViewModel: ObservableObject {
 	
 	func pushConfirmDetails() {
 		if !goodType.isEmpty && dropLocation != nil && tripVehicle != nil {
-			showConfirmDetails = true
+			showGoodTypePicker = false
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+				self.showConfirmDetails = true
+			}
+			DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+				self.resetAll()
+			}
 		}
 	}
 	
@@ -86,10 +83,14 @@ class HomeViewModel: ObservableObject {
 		}
 	}
 	
-	func pushLocationPicker() {
+	func pushLocationPicker(_ delayed: Bool = true) {
 		self.showVehiclePicker = false
 		self.showGoodTypePicker = false
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+		if delayed {
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+				self.showPointPicker = true
+			}
+		} else {
 			self.showPointPicker = true
 		}
 	}
@@ -113,8 +114,13 @@ class HomeViewModel: ObservableObject {
 	func resetAll() {
 		showPointPicker = false
 		showVehiclePicker = false
+		showGoodTypePicker = false
+		showGoodsList = true
+		
 		dropLocation = nil
 		tripVehicle = nil
+		goodType = ""
+		
 		searchValue = ""
 		predictions = []
 	}

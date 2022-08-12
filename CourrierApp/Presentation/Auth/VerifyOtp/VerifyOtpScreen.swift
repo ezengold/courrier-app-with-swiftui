@@ -28,6 +28,7 @@ struct VerifyOtpScreen: View {
 						.lineSpacing(8)
 					Spacer()
 				}
+				.padding(.horizontal, 20)
 				Spacer().frame(height: 50)
 				GeometryReader { geometry in
 					OtpField(
@@ -38,7 +39,6 @@ struct VerifyOtpScreen: View {
 				}
 				Spacer()
 			}
-			.padding(.horizontal, 20)
 			.padding(.bottom, 50)
 			.onAppear() {
 				vm.setupViewModel(

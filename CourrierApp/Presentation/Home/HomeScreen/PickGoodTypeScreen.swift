@@ -60,6 +60,8 @@ extension PickGoodTypeScreen {
 				Text(vm.goodTypes[key])
 					.font(vm.goodTypes[key] == vm.goodType ? ThemeFont.bold(14) : ThemeFont.regular(14))
 					.foregroundColor(ThemeColor.text)
+					.padding(.horizontal, 20)
+					.frame(maxWidth: .infinity, alignment: .leading)
 					.multilineTextAlignment(.leading)
 					.onTapGesture {
 						vm.goodType = vm.goodTypes[key]
