@@ -15,19 +15,8 @@ struct VerifyOtpScreen: View {
 			ThemeColor.background
 				.edgesIgnoringSafeArea(.all)
 			VStack(alignment: .center, spacing: 10) {
-				HStack {
-					Image(systemName: "arrow.backward")
-						.resizable()
-						.scaledToFit()
-						.frame(width: 20, height: 20)
-						.padding(8)
-						.onTapGesture {
-							presentationMode.wrappedValue.dismiss()
-						}
-					Text("Enter Verification Code")
-						.foregroundColor(ThemeColor.boldText)
-						.font(ThemeFont.bold(17))
-					Spacer()
+				Heading(title: "Enter Verification Code") {
+					presentationMode.wrappedValue.dismiss()
 				}
 				HStack {
 					Text("We have sent an OTP to ")
@@ -118,7 +107,7 @@ struct VerifyOtpScreen: View {
 struct VerifyOtpScreen_Previews: PreviewProvider {
 	static var previews: some View {
 		VerifyOtpScreen(loginFields: .DEFAULT)
-			.preferredColorScheme(.light)
+			.environmentObject(AuthModel())
 			.previewDevice("iPhone 12")
 	}
 }

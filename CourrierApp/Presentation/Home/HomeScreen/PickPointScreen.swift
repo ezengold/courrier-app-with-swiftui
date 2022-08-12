@@ -13,6 +13,9 @@ struct PickPointScreen: View {
 				predictions
 				Spacer()
 			}
+			.onTapGesture {
+				UIApplication.shared.dismissKeyboard()
+			}
 		}
 		.onChange(of: vm.searchValue) { _ in
 			Task {
@@ -97,7 +100,7 @@ struct PickPointScreen: View {
 					.padding(.horizontal, 15)
 					.onTapGesture {
 						if vm.dropLocation != nil {
-							vm.performVehiclePicking()
+							vm.pushVehiclePicker()
 						}
 					}
 				}

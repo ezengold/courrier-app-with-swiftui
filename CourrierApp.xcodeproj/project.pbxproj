@@ -60,6 +60,8 @@
 		B17E0FBC28949DD70038D42A /* MyBookingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FBB28949DD70038D42A /* MyBookingScreen.swift */; };
 		B17E0FBF28949E7E0038D42A /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FBE28949E7E0038D42A /* ProfileScreen.swift */; };
 		B17E0FC128949EDF0038D42A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E0FC028949EDF0038D42A /* Constants.swift */; };
+		B198D4AE28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198D4AD28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift */; };
+		B198D4B128A6FDBC0092D2A5 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198D4B028A6FDBC0092D2A5 /* Heading.swift */; };
 		B1A2EB232893C481006221CC /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A2EB222893C481006221CC /* countries.json */; };
 		B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */; };
 		B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2EB262893C4C0006221CC /* CountryItem.swift */; };
@@ -85,6 +87,8 @@
 		B1DD017528802264004D875B /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD017428802264004D875B /* ThemeFont.swift */; };
 		B1DD017828802940004D875B /* FullWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD017728802940004D875B /* FullWidth.swift */; };
 		B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */; };
+		B1F5F27C28A6AC4500A49B9A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F5F27B28A6AC4500A49B9A /* Vehicle.swift */; };
+		B1F5F27E28A6B17200A49B9A /* PickGoodTypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F5F27D28A6B17200A49B9A /* PickGoodTypeScreen.swift */; };
 		B1F89543289D214D00B8CE6D /* OtpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F89542289D214D00B8CE6D /* OtpField.swift */; };
 		B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */; };
 /* End PBXBuildFile section */
@@ -143,6 +147,8 @@
 		B17E0FBB28949DD70038D42A /* MyBookingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingScreen.swift; sourceTree = "<group>"; };
 		B17E0FBE28949E7E0038D42A /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		B17E0FC028949EDF0038D42A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B198D4AD28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDetailsScreen.swift; sourceTree = "<group>"; };
+		B198D4B028A6FDBC0092D2A5 /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		B1A2EB222893C481006221CC /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		B1A2EB242893C4AA006221CC /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
 		B1A2EB262893C4C0006221CC /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 		B1DD017428802264004D875B /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		B1DD017728802940004D875B /* FullWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidth.swift; sourceTree = "<group>"; };
 		B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B1F5F27B28A6AC4500A49B9A /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		B1F5F27D28A6B17200A49B9A /* PickGoodTypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGoodTypeScreen.swift; sourceTree = "<group>"; };
 		B1F89542289D214D00B8CE6D /* OtpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpField.swift; sourceTree = "<group>"; };
 		B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -280,6 +288,7 @@
 				B14845E1289B2D0B0016242C /* LoginModel.swift */,
 				B1480D2928A038D700BE177A /* AuthModel.swift */,
 				B1645B0A28A4AEB000D9AF9A /* LocationItem.swift */,
+				B1F5F27B28A6AC4500A49B9A /* Vehicle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 		B17E0FB328949C760038D42A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B198D4AC28A6FC350092D2A5 /* ConfirmDetailsScreen */,
 				B17E0FB628949D010038D42A /* HomeScreen */,
 			);
 			path = Home;
@@ -415,6 +425,7 @@
 				B1645B0828A4AE4E00D9AF9A /* HomeViewModel.swift */,
 				B135C7AB28A5242100566266 /* PickPointScreen.swift */,
 				B135C7B828A541BA00566266 /* PickVehicleScreen.swift */,
+				B1F5F27D28A6B17200A49B9A /* PickGoodTypeScreen.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -433,6 +444,22 @@
 				B17E0FBE28949E7E0038D42A /* ProfileScreen.swift */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		B198D4AC28A6FC350092D2A5 /* ConfirmDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B198D4AD28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift */,
+			);
+			path = ConfirmDetailsScreen;
+			sourceTree = "<group>";
+		};
+		B198D4AF28A6FDAA0092D2A5 /* Heading */ = {
+			isa = PBXGroup;
+			children = (
+				B198D4B028A6FDBC0092D2A5 /* Heading.swift */,
+			);
+			path = Heading;
 			sourceTree = "<group>";
 		};
 		B1A2EB212893C3EF006221CC /* CountryPicker */ = {
@@ -562,6 +589,7 @@
 		B1F89540289D210300B8CE6D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B198D4AF28A6FDAA0092D2A5 /* Heading */,
 				B1645AFD28A47ED200D9AF9A /* TabBar */,
 				B1F89541289D211200B8CE6D /* OtpField */,
 				B1A2EB212893C3EF006221CC /* CountryPicker */,
@@ -674,12 +702,14 @@
 				B1645B0128A47F0A00D9AF9A /* TabBarModel.swift in Sources */,
 				B17E0FBF28949E7E0038D42A /* ProfileScreen.swift in Sources */,
 				B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */,
+				B1F5F27C28A6AC4500A49B9A /* Vehicle.swift in Sources */,
 				B135EEDD2897491500448803 /* MaxValue.swift in Sources */,
 				B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */,
 				B135C7B328A530EF00566266 /* LocationItemRepositoryImpl.swift in Sources */,
 				B135EED9289748AB00448803 /* MaxLength.swift in Sources */,
 				B1645B0B28A4AEB000D9AF9A /* LocationItem.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
+				B198D4B128A6FDBC0092D2A5 /* Heading.swift in Sources */,
 				B1DD017828802940004D875B /* FullWidth.swift in Sources */,
 				B1598BEF2896A41B00600E91 /* GetCountries.swift in Sources */,
 				B135EEC9289747B700448803 /* IsName.swift in Sources */,
@@ -688,6 +718,7 @@
 				B135EECD2897480400448803 /* IsInteger.swift in Sources */,
 				B135C7B928A541BA00566266 /* PickVehicleScreen.swift in Sources */,
 				B1A2EB252893C4AA006221CC /* CountryPickerViewModel.swift in Sources */,
+				B198D4AE28A6FC4F0092D2A5 /* ConfirmDetailsScreen.swift in Sources */,
 				B1DD017528802264004D875B /* ThemeFont.swift in Sources */,
 				B17B8222289CFF65004AA2E5 /* VerifyOtpScreen.swift in Sources */,
 				B17B8224289CFF80004AA2E5 /* VerifyOtpViewModel.swift in Sources */,
@@ -709,6 +740,7 @@
 				B1ABFB4E289804270028AC41 /* RegisterModel.swift in Sources */,
 				B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */,
 				B1598BE22896999200600E91 /* CountryItemAPIEntity.swift in Sources */,
+				B1F5F27E28A6B17200A49B9A /* PickGoodTypeScreen.swift in Sources */,
 				B17E0FBC28949DD70038D42A /* MyBookingScreen.swift in Sources */,
 				B1A2EB272893C4C0006221CC /* CountryItem.swift in Sources */,
 				B135C7B528A5316100566266 /* LocationItemAPIImpl.swift in Sources */,

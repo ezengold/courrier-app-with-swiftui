@@ -11,16 +11,8 @@ struct RegisterScreen: View {
 				.edgesIgnoringSafeArea(.all)
 			ScrollView(.vertical, showsIndicators: false) {
 				VStack(alignment: .center, spacing: 0) {
-					HStack {
-						Image(systemName: "arrow.backward")
-							.resizable()
-							.scaledToFit()
-							.frame(width: 20, height: 20)
-							.padding(8)
-							.onTapGesture {
-								presentationMode.wrappedValue.dismiss()
-							}
-						Spacer()
+					Heading(title: "") {
+						presentationMode.wrappedValue.dismiss()
 					}
 					Group {
 						Spacer(minLength: 30)
@@ -164,8 +156,8 @@ struct RegisterScreen: View {
 							}
 						}
 					}
+					.padding(.horizontal, 20)
 				}
-				.padding(.horizontal, 20)
 				.padding(.bottom, 50)
 			}
 			.onTapGesture {
