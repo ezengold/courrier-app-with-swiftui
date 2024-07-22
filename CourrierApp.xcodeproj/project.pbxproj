@@ -120,6 +120,7 @@
 		B135EEDC2897491500448803 /* MaxValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxValue.swift; sourceTree = "<group>"; };
 		B135EEDE2897492600448803 /* ExactSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactSize.swift; sourceTree = "<group>"; };
 		B13B84FB2C4F1FC100791FE3 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		B13B84FD2C4F20E600791FE3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B13EE64D28941768001B53A0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B13EE64F28941792001B53A0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B1480D2928A038D700BE177A /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -486,6 +487,8 @@
 			isa = PBXGroup;
 			children = (
 				B1C7E356288013B600A6FA17 /* CourrierApp */,
+				B13B84FB2C4F1FC100791FE3 /* LICENSE.md */,
+				B13B84FD2C4F20E600791FE3 /* README.md */,
 				B1C7E355288013B600A6FA17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -511,7 +514,6 @@
 				B1BFB9CD289483A6002817EE /* SplashScreen.storyboard */,
 				B1C7E35B288013BA00A6FA17 /* Assets.xcassets */,
 				B1DD01572880192B004D875B /* Info.plist */,
-				B13B84FB2C4F1FC100791FE3 /* LICENSE.md */,
 			);
 			path = CourrierApp;
 			sourceTree = "<group>";
