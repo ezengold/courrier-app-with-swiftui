@@ -91,6 +91,7 @@
 		B1EDAD8F28934DAC00DF3A8B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */; };
 		B1F5F27C28A6AC4500A49B9A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F5F27B28A6AC4500A49B9A /* Vehicle.swift */; };
 		B1F5F27E28A6B17200A49B9A /* PickGoodTypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F5F27D28A6B17200A49B9A /* PickGoodTypeScreen.swift */; };
+		B1F6D97328A7CA2A00773837 /* BillingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6D97228A7CA2900773837 /* BillingScreen.swift */; };
 		B1F89543289D214D00B8CE6D /* OtpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F89542289D214D00B8CE6D /* OtpField.swift */; };
 		B1FE27AD2891A5B7009D1734 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */; };
 /* End PBXBuildFile section */
@@ -182,6 +183,7 @@
 		B1EDAD8E28934DAB00DF3A8B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B1F5F27B28A6AC4500A49B9A /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		B1F5F27D28A6B17200A49B9A /* PickGoodTypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGoodTypeScreen.swift; sourceTree = "<group>"; };
+		B1F6D97228A7CA2900773837 /* BillingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingScreen.swift; sourceTree = "<group>"; };
 		B1F89542289D214D00B8CE6D /* OtpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpField.swift; sourceTree = "<group>"; };
 		B1FE27AC2891A5B7009D1734 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -401,6 +403,7 @@
 		B17E0FB328949C760038D42A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B1F6D97128A7CA1500773837 /* BillingScreen */,
 				B198D4AC28A6FC350092D2A5 /* ConfirmDetailsScreen */,
 				B17E0FB628949D010038D42A /* HomeScreen */,
 			);
@@ -592,6 +595,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B1F6D97128A7CA1500773837 /* BillingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6D97228A7CA2900773837 /* BillingScreen.swift */,
+			);
+			path = BillingScreen;
+			sourceTree = "<group>";
+		};
 		B1F89540289D210300B8CE6D /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +724,7 @@
 				B17C13322896F220003BDB85 /* SwiftFormRule.swift in Sources */,
 				B135C7B328A530EF00566266 /* LocationItemRepositoryImpl.swift in Sources */,
 				B135EED9289748AB00448803 /* MaxLength.swift in Sources */,
+				B1F6D97328A7CA2A00773837 /* BillingScreen.swift in Sources */,
 				B1645B0B28A4AEB000D9AF9A /* LocationItem.swift in Sources */,
 				B15C113B2880881F00A40DBA /* LoginScreen.swift in Sources */,
 				B198D4B128A6FDBC0092D2A5 /* Heading.swift in Sources */,

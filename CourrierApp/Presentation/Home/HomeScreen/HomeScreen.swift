@@ -19,7 +19,11 @@ struct HomeScreen: View {
 						startLocation: vm.currentLocation,
 						dropLocation: vm.dropLocation ?? LocationItem(title: "Ash. Dr. Sans john", description: "1901, thornridge Cir., Shiloh"),
 						vehicle: vm.tripVehicle ?? .pickup,
-						goodType: vm.goodType
+						goodType: vm.goodType,
+						name: auth.fullName,
+						pickerCountry: .DEFAULT_COUNTRY,
+						pickerPhoneNumber: auth.phoneNumber,
+						dropoffCountry: .DEFAULT_COUNTRY
 					))),
 					isActive: $vm.showConfirmDetails
 				)
@@ -51,15 +55,14 @@ struct HomeScreen: View {
 					.foregroundColor(Color.white)
 			}
 		}
-		.padding(.top, 50)
 		.padding(.bottom, 50)
 		.frame(maxWidth: .infinity)
 		.background(
 			LinearGradient(
 				colors: [
-					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.9),
-					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.6),
-					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.3),
+					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.7),
+					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.5),
+					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.2),
 					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0),
 				],
 				startPoint: .top,
@@ -90,7 +93,7 @@ struct HomeScreen: View {
 				.padding(.horizontal, 15)
 			}
 		}
-		.padding(.bottom, 145)
+		.padding(.bottom, 115)
 		.padding(.top, 50)
 		.frame(maxWidth: .infinity)
 		.background(
@@ -98,6 +101,7 @@ struct HomeScreen: View {
 				colors: [
 					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.9),
 					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.6),
+					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.5),
 					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0.3),
 					Color(.sRGB, red: 25/255, green: 33/255, blue: 45/255, opacity: 0),
 				],

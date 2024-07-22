@@ -49,6 +49,7 @@ struct RegisterScreen: View {
 								.font(ThemeFont.medium(16))
 								.frame(width: 120, height: 55)
 								.background(ThemeColor.background)
+								.cornerRadius(11)
 								.overlay {
 									RoundedRectangle(cornerRadius: 11)
 										.stroke(
@@ -69,6 +70,7 @@ struct RegisterScreen: View {
 								.frame(height: 55)
 								.frame(maxWidth: .infinity)
 								.background(ThemeColor.background)
+								.cornerRadius(11)
 								.overlay {
 									RoundedRectangle(cornerRadius: 11)
 										.stroke(
@@ -84,6 +86,7 @@ struct RegisterScreen: View {
 							.frame(height: 55)
 							.frame(maxWidth: .infinity)
 							.background(ThemeColor.background)
+							.cornerRadius(11)
 							.overlay {
 								RoundedRectangle(cornerRadius: 11)
 									.stroke(
@@ -105,6 +108,7 @@ struct RegisterScreen: View {
 							.frame(height: 55)
 							.frame(maxWidth: .infinity)
 							.background(ThemeColor.background)
+							.cornerRadius(11)
 							.overlay {
 								RoundedRectangle(cornerRadius: 11)
 									.stroke(

@@ -16,15 +16,16 @@ struct ContentView: View {
 					.progressViewStyle(CircularProgressViewStyle(tint: ThemeColor.primary))
 			} else {
 				if !auth.id.isEmpty && !auth.token.isEmpty {
-					NavigationView {
-						TabBarView(current: $currentTab) {
+					TabBarView(current: $currentTab) {
+						NavigationView {
 							HomeScreen()
-								.tabBarItem(.home, current: $currentTab)
-							MyBookingScreen()
-								.tabBarItem(.bookings, current: $currentTab)
-							ProfileScreen()
-								.tabBarItem(.profile, current: $currentTab)
+								.navigationBarHidden(true)
 						}
+						.tabBarItem(.home, current: $currentTab)
+						MyBookingScreen()
+							.tabBarItem(.bookings, current: $currentTab)
+						ProfileScreen()
+							.tabBarItem(.profile, current: $currentTab)
 					}
 				} else {
 					NavigationView {
@@ -43,7 +44,7 @@ struct ContentView: View {
 	func fetchAuth() {
 		let data = Data(authJson.utf8)
 		
-		if !data.isEmpty {
+//		if !data.isEmpty {
 			loading = true
 			do {
 				let user = try JSONDecoder().decode(AuthModel.self, from: data)
@@ -56,19 +57,19 @@ struct ContentView: View {
 				self.auth.status = user.status
 				self.auth.token = user.token
 				
-				DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+				DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 					loading = false
 				}
 			} catch {
-				DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+				DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 					loading = false
 				}
 			}
-		} else {
-			self.auth.id = "1"
-			self.auth.fullName = "Ezen Gold"
-			self.auth.token = "loremipsumdolor"
-		}
+//		} else {
+//			self.auth.id = "1"
+//			self.auth.fullName = "Ezen Gold"
+//			self.auth.token = "loremipsumdolor"
+//		}
 	}
 }
 

@@ -14,11 +14,9 @@ class HomeViewModel: ObservableObject {
 		"Ceramics / Sanitary / hardware",
 		"Paper / Packaging / Printed Material",
 		"Chemical / paints",
-		"Paper / Packaging / Printed Material",
 		"Logisitics Service provide / packers and movers",
 		"perishable food items",
-		"Furniture / Home Furnishing",
-		"Paper / Packaging / Printed Material",
+		"Furniture / Home Furnishing"
 	]
 	
 	@Published var currentLocation: LocationItem = LocationItem(title: "Your Location", description: "3891, Ranchview, LA, NY")

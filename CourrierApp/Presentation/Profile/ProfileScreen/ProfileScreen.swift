@@ -3,8 +3,10 @@ import SwiftUI
 struct ProfileScreen: View {
     var body: some View {
 		ZStack {
-			ThemeColor.background
-				.edgesIgnoringSafeArea(.all)
+//			ThemeColor.background
+//				.edgesIgnoringSafeArea(.all)
+			LinearGradient(colors: [.orange, .white], startPoint: .top, endPoint: .bottom)
+				.ignoresSafeArea()
 			Text("ProfileScreen")
 		}
 		.navigationBarHidden(true)

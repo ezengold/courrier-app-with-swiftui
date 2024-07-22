@@ -52,7 +52,6 @@ class SwiftFormValidator {
 			self.fields[fieldIndex] = field
 		}
 	}
-
 	
 	func validateForm(values: [String: Any]) {
 		var isAllValid: Bool = true
